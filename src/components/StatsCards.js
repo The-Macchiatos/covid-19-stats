@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, Box} from './base';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Flex from "./base/Flex";
+import Image from "./base/Image";
 
 const styles = {
   width: '100%',
@@ -17,6 +19,9 @@ const styles = {
 const CardBox = ({text, cases, cases_prev, ...props}) => {
   return (
     <Box mb={4} key={props.key} __css={styles}>
+      <Flex alignItems='center' justifyContent='center'>
+        <Image mt='3' height={'3.4rem'} mb='2' alt={`flaticon-${props.logo}`} src={`./icon-${props.logo}.svg`}/>
+      </Flex>
       <Text
         fontSize={6}
         color='#FFFFFF'>
