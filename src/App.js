@@ -1,6 +1,7 @@
 import React from 'react';
 import {Flex} from './components/base';
-import { Bar } from '@nivo/bar'
+import { Bar } from '@nivo/bar';
+
 import data from './data/stats.json';
 
 function App() {
@@ -14,16 +15,20 @@ function App() {
        }
     });
 
-    console.log(vitals);
+    const calendar = data.map((d, i) => {
+        return {
+            Date: d.date,
+            Cases: d.new,
+            Death: d.death_new,
+            Recovered: d.recovered_new
+        }
+    });
 
-    const keys = ['Death', 'Recovered', 'Active'];
     const commonProps = {
         width: 1000,
         height: 500,
         margin: {top: 60, right: 80, bottom: 60, left: 80},
-        data: vitals,
         indexBy: 'Date',
-        keys,
         padding: 0.5,
         enableGridY: false,
         labelTextColor: 'inherit:darker(1.4)',
@@ -45,8 +50,20 @@ function App() {
 
             <Bar
                 {...commonProps}
+                keys={ ['Death', 'Recovered', 'Active']}
                 colors={{ scheme: 'set1' }}
+                data={vitals}
             />
+
+            <Bar
+                {...commonProps}
+                keys={['Cases', 'Recovered', 'Death']}
+                colors={{ scheme: 'set1' }}
+                data={calendar}
+                groupMode={'grouped'}
+            />
+
+
 
         </Flex>
 
