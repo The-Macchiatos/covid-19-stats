@@ -1,56 +1,55 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Flex} from './components/base';
-import { Bar } from '@nivo/bar'
 import data from './data/stats.json';
+import MainContainer from './components/MainContainer';
+import CardBox from './components/CoronaCards';
+import AllCases from './components/Charts/AllCases';
 
 function App() {
+  const cardData = [
+    {
+      name: 'Active Cases',
+      cases: data[data.length - 1]['active']['total'],
+      logo: 'active'
+    },
+    {
+      name: 'Recovered',
+      cases: data[data.length - 1]['recovered'],
+      logo: 'recovered'
+    },
+    {
+      name: 'Deceased',
+      cases: data[data.length - 1]['death'],
+      logo: 'deceased'
+    },
+    {
+      name: 'Total',
+      cases: data[data.length - 1]['total'],
+      logo: 'people'
+    }
+  ];
 
-    const vitals = data.map(d => {
-       return {
-           Recovered: d.recovered,
-           Death: d.death,
-           Active: d.active.total,
-           Date: d.date
-       }
-    });
+  useEffect(() => {
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#1E202A';
+  });
 
-    console.log(vitals);
-
-    const keys = ['Death', 'Recovered', 'Active'];
-    const commonProps = {
-        width: 1000,
-        height: 500,
-        margin: {top: 60, right: 80, bottom: 60, left: 80},
-        data: vitals,
-        indexBy: 'Date',
-        keys,
-        padding: 0.5,
-        enableGridY: false,
-        labelTextColor: 'inherit:darker(1.4)',
-        labelSkipWidth: 16,
-        labelSkipHeight: 16,
-        enableLabel: false,
-        axisBottom: {
-            tickRotation: -45
-        }
-    };
-
-
-    return (
-        <Flex
-            px={2}
-            color="black"
-            bg="white"
-            alignItems="center">
-
-            <Bar
-                {...commonProps}
-                colors={{ scheme: 'set1' }}
-            />
-
+  return (
+    <>
+      <MainContainer>
+        <Flex mb={4} justifyContent={'space-between'} flexWrap='wrap'>
+          {cardData.map((item, key) => (
+            <CardBox
+              key={key}
+              text={item.name}
+              {...item}
+            />))
+          }
         </Flex>
+      </MainContainer>
+      <AllCases/>
+    </>
 
-    );
+  );
 }
 
 export default App;
