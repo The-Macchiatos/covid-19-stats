@@ -1,73 +1,63 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Flex} from './components/base';
-import { Bar } from '@nivo/bar';
-
 import data from './data/stats.json';
+import MainContainer from './components/MainContainer';
+import CardBox from './components/CoronaCards';
+import AllCases from './components/Charts/AllCases';
+import NewCases from './components/Charts/NewCases';
 
 function App() {
 
-    const vitals = data.map(d => {
-       return {
-           Recovered: d.recovered,
-           Death: d.death,
-           Active: d.active.total,
-           Date: d.date
-       }
-    });
+  const active = data[data.length - 1]['active']['total'];
+  const recovered = data[data.length - 1]['recovered'];
+  const deceased = data[data.length - 1]['death'];
+  const total = active + recovered + deceased;
 
-    const calendar = data.map((d, i) => {
-        return {
-            Date: d.date,
-            Cases: d.new,
-            Death: d.death_new,
-            Recovered: d.recovered_new
-        }
-    });
+  const cardData = [
+    {
+      name: 'Active Cases',
+      cases: data[data.length - 1]['active']['total'],
+      logo: 'active'
+    },
+    {
+      name: 'Recovered',
+      cases: data[data.length - 1]['recovered'],
+      logo: 'recovered'
+    },
+    {
+      name: 'Deceased',
+      cases: data[data.length - 1]['death'],
+      logo: 'deceased'
+    },
+    {
+      name: 'Total',
+      cases: total,
+      logo: 'people'
+    }
+  ];
 
-    const commonProps = {
-        width: 1000,
-        height: 500,
-        margin: {top: 60, right: 80, bottom: 60, left: 80},
-        indexBy: 'Date',
-        padding: 0.5,
-        enableGridY: false,
-        labelTextColor: 'inherit:darker(1.4)',
-        labelSkipWidth: 16,
-        labelSkipHeight: 16,
-        enableLabel: false,
-        axisBottom: {
-            tickRotation: -45
-        }
-    };
+  useEffect(() => {
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#1E202A';
+  });
 
-
-    return (
-        <Flex
-            px={2}
-            color="black"
-            bg="white"
-            alignItems="center">
-
-            <Bar
-                {...commonProps}
-                keys={ ['Death', 'Recovered', 'Active']}
-                colors={{ scheme: 'set1' }}
-                data={vitals}
-            />
-
-            <Bar
-                {...commonProps}
-                keys={['Cases', 'Recovered', 'Death']}
-                colors={{ scheme: 'set1' }}
-                data={calendar}
-                groupMode={'grouped'}
-            />
-
-
-
+  return (
+    <>
+      <MainContainer>
+        <Flex mb={4} justifyContent={'space-between'} flexWrap='wrap'>
+          {cardData.map((item, key) => (
+            <CardBox
+              key={key}
+              text={item.name}
+              {...item}
+            />))
+          }
         </Flex>
+      </MainContainer>
+      <AllCases/>
+      <NewCases/>
+    </>
 
-    );
+  );
 }
 
 export default App;
