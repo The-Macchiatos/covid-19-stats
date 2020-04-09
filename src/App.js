@@ -5,6 +5,9 @@ import MainContainer from './components/MainContainer';
 import CardBox from './components/CoronaCards';
 import AllCases from './components/Charts/AllCases';
 import NewCases from './components/Charts/NewCases';
+import Gender from "./components/Charts/Gender";
+import Age from "./components/Charts/Age";
+import Origin from "./components/Charts/Origin";
 
 function App() {
 
@@ -55,6 +58,9 @@ function App() {
       </MainContainer>
       <AllCases/>
       <NewCases/>
+      <Gender/>
+      <Age/>
+      <Origin/>
     </>
 
   );
