@@ -39,7 +39,7 @@ const MainContainer = () => {
         color='white'>
         All Cases
       </Text>
-      <Box __css={{height: 500}}>
+      <Box __css={{height: 400}}>
         <ResponsiveBar
           {...commonProps}
           colors={{scheme: 'set2'}}

@@ -12,18 +12,18 @@ const MainContainer = ({children}) => {
     <Box as='main' __css={styles}>
       <Flex mb={4} pb='1' justifyContent='space-between'>
         <Box>
-          <Image mr='1' height={'48px'} alt={`flaticon-logos`} src={`./icon-logo.svg`}/>
+          {/*<Image mr='1' height={'48px'} alt={`logos`} src={`./icon-logo.svg`}/>*/}
           <Heading
             fontSize={[3, 4, 5, 5]}
             color='white'>
-            Coronavirus
+            Covid-19 Mauritius
           </Heading>
           <Text
             fontSize={[1, 2, 2, 2]}
             mt={'20'}
             fontWeight='500'
             color='white'>
-            Mauritius Covid-19 Pandemic
+            Statistic on the Pandemic
           </Text>
         </Box>
         <Text

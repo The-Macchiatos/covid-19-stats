@@ -1,12 +1,11 @@
 import React from 'react';
-import {Image, Text, Flex, Box} from './base';
+import {Text, Box} from './base';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const styles = {
-  height: '10rem',
-  width: '17rem',
+  width: '100%',
   textAlign: 'center',
   backgroundColor: '#252A41',
-  border: '1px solid #DCDEE0',
   overflow: 'hidden',
   borderRadius: '8px',
   ':hover': {
@@ -15,24 +14,28 @@ const styles = {
   }
 };
 
-const CardBox = ({text, cases, ...props}) => {
+const CardBox = ({text, cases, cases_prev, ...props}) => {
   return (
     <Box mb={4} key={props.key} __css={styles}>
-      <Flex alignItems='center' justifyContent='center'>
-        <Image mt='3' height={'3.4rem'} mb='2' alt={`flaticon-${props.logo}`} src={`./icon-${props.logo}.svg`}/>
-      </Flex>
       <Text
-        fontSize={5}
+        fontSize={6}
         color='#FFFFFF'>
         {cases}
       </Text>
       <Text
-        fontSize={3}
+        fontSize={1}
         fontWeight='400'
         color='#8B97C6'
         letterSpacing={2}>
         {text}
       </Text>
+
+        <Text
+            color="success"
+            py={2}
+        >
+            <FontAwesomeIcon icon="caret-up"/> {cases - cases_prev}
+        </Text>
     </Box>
   );
 };

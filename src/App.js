@@ -1,43 +1,24 @@
 import React, {useEffect} from 'react';
-import {Flex} from './components/base';
-import data from './data/stats.json';
 import MainContainer from './components/MainContainer';
-import CardBox from './components/CoronaCards';
+import CardBox from './components/StatsCards';
 import AllCases from './components/Charts/AllCases';
 import NewCases from './components/Charts/NewCases';
 import Gender from "./components/Charts/Gender";
 import Age from "./components/Charts/Age";
 import Origin from "./components/Charts/Origin";
+import Tiles from "./components/layout";
+import {cardData} from "./utils/processedData";
+
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faCaretUp, faCaretDown);
+
 
 function App() {
 
-  const active = data[data.length - 1]['active']['total'];
-  const recovered = data[data.length - 1]['recovered'];
-  const deceased = data[data.length - 1]['death'];
-  const total = active + recovered + deceased;
 
-  const cardData = [
-    {
-      name: 'Active Cases',
-      cases: data[data.length - 1]['active']['total'],
-      logo: 'active'
-    },
-    {
-      name: 'Recovered',
-      cases: data[data.length - 1]['recovered'],
-      logo: 'recovered'
-    },
-    {
-      name: 'Deceased',
-      cases: data[data.length - 1]['death'],
-      logo: 'deceased'
-    },
-    {
-      name: 'Total',
-      cases: total,
-      logo: 'people'
-    }
-  ];
 
   useEffect(() => {
     document.getElementsByTagName('html')[0].style.backgroundColor = '#1E202A';
@@ -46,21 +27,26 @@ function App() {
   return (
     <>
       <MainContainer>
-        <Flex mb={4} justifyContent={'space-between'} flexWrap='wrap'>
-          {cardData.map((item, key) => (
-            <CardBox
-              key={key}
-              text={item.name}
-              {...item}
-            />))
-          }
-        </Flex>
+          <Tiles columns={[1, 2, 4]} mb={4}>
+              {cardData.map((item, key) => (
+                  <CardBox
+                      key={key}
+                      text={item.name}
+                      {...item}
+                  />))
+              }
+          </Tiles>
+          <AllCases/>
+          <NewCases/>
+          <Tiles columns={[1, 1, 3]}>
+              <Origin/>
+              <Gender/>
+              <Age/>
+          </Tiles>
+
       </MainContainer>
-      <AllCases/>
-      <NewCases/>
-      <Gender/>
-      <Age/>
-      <Origin/>
+
+
     </>
 
   );

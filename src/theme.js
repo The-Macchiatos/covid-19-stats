@@ -1,17 +1,19 @@
 export const theme = {
+    googleFonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700&display=swap',
     colors: {
         text: '#000',
         background: '#121420',
         primary: '#07c',
         secondary: '#30c',
+        success: '#9cf4f1',
         muted: '#f6f6f9',
         gray: '#dddddf',
         highlight: 'hsla(205, 100%, 40%, 0.125)',
     },
     fonts: {
-        body: 'system-ui, sans-serif',
-        heading: 'system-ui, sans-serif',
-        monospace: 'Menlo, monospace',
+        body: 'Roboto, sans-serif',
+        heading: 'inherit',
+        monospace: '"Roboto Mono", monospace',
     },
     fontSizes: [
         12, 14, 16, 20, 24, 32, 48, 64, 96

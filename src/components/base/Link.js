@@ -1,5 +1,5 @@
 import React, {forwardRef} from "react";
-import {Box} from "reflexbox";
+import Box from "./Box";
 
 const Link = forwardRef((props, ref) =>
     <Box

@@ -1,4 +1,5 @@
-import { Box, Flex } from 'reflexbox'
+import Flex from "./Flex";
+import Box from "./Box";
 import Button from "./Button";
 import Card from "./Card";
 import Heading from "./Heading";

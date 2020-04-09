@@ -1,5 +1,5 @@
 import React, {forwardRef} from "react";
-import {Box} from "reflexbox";
+import Box from "./Box";
 
 const Heading = forwardRef((props, ref) =>
     <Box

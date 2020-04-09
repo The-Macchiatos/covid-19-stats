@@ -21,15 +21,15 @@ const Gender = () => {
 
     return (
         <>
-            <Text
-                fontSize={[2, 2, 3, 4]}
-                mt={'30'}
-                textAlign={'center'}
-                fontWeight='500'
-                color='white'>
-                Cases by gender
-            </Text>
             <Box __css={{height: 500}}>
+                <Text
+                    fontSize={[2, 2, 3, 4]}
+                    mt={'30'}
+                    textAlign={'center'}
+                    fontWeight='500'
+                    color='white'>
+                    Cases by gender
+                </Text>
                 <ResponsivePie
                     data={gender}
                     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
