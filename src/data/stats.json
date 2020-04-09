@@ -18,7 +18,8 @@
   }
 },
 "death": 0,
-"recovered": 0
+"recovered": 0,
+ "total": 3
 },
 {
 "date": "19-03-2020",
@@ -40,7 +41,8 @@
   }
 },
 "death": 0,
-"recovered": 0
+"recovered": 0,
+ "total": 7
 },
 {
 "date": "20-03-2020",
@@ -62,7 +64,8 @@
   }
 },
 "death": 0,
-"recovered": 0
+"recovered": 0,
+  "total": 12
 },
 {
 "date": "21-03-2020",
@@ -84,7 +87,8 @@
   }
 },
 "death": 1,
-"recovered": 0
+"recovered": 0,
+  "total": 14
 },
 {
 "date": "22-03-2020",
@@ -106,7 +110,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 18
 },
 {
 "date": "23-03-2020",
@@ -128,7 +133,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 36
 },
 {
 "date": "24-03-2020",
@@ -150,7 +156,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 42
 },
 {
 "date": "25-03-2020",
@@ -172,7 +179,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 48
 },
 {
 "date": "26-03-2020",
@@ -194,7 +202,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 81
 },
 {
 "date": "27-03-2020",
@@ -216,7 +225,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 94
 },
 {
 "date": "28-03-2020",
@@ -238,7 +248,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 102
 },
 {
 "date": "29-03-2020",
@@ -260,7 +271,8 @@
   }
 },
 "death": 2,
-"recovered": 0
+"recovered": 0,
+  "total": 107
 },
 {
 "date": "30-03-2020",
@@ -282,7 +294,8 @@
   }
 },
 "death": 3,
-"recovered": 0
+"recovered": 0,
+  "total": 128
 },
 {
 "date": "31-03-2020",
@@ -304,7 +317,8 @@
   }
 },
 "death": 5,
-"recovered": 0
+"recovered": 0,
+  "total": 143
 },
 {
 "date": "01-04-2020",
@@ -326,7 +340,8 @@
   }
 },
 "death": 6,
-"recovered": 0
+"recovered": 0,
+  "total": 161
 },
 {
 "date": "02-04-2020",
@@ -348,7 +363,8 @@
   }
 },
 "death": 7,
-"recovered": 0
+"recovered": 0,
+  "total": 169
 },
 {
 "date": "03-04-2020",
@@ -370,7 +386,8 @@
   }
 },
 "death": 7,
-"recovered": 0
+"recovered": 0,
+  "total": 186
 },
 {
 "date": "04-04-2020",
@@ -392,7 +409,8 @@
   }
 },
 "death": 7,
-"recovered": 0
+"recovered": 0,
+  "total": 196
 },
 {
 "date": "05-04-2020",
@@ -414,7 +432,8 @@
   }
 },
 "death": 7,
-"recovered": 0
+"recovered": 0,
+  "total": 227
 },
 {
 "date": "06-04-2020",
@@ -436,7 +455,8 @@
   }
 },
 "death": 7,
-"recovered": 4
+"recovered": 4,
+  "total": 244
 },
   {
     "date": "07-04-2020",
@@ -458,6 +478,30 @@
       }
     },
     "death": 7,
-    "recovered": 8
+    "recovered": 8,
+    "total": 268
+  },
+  {
+    "date": "08-04-2020",
+    "active": {
+      "total": 247,
+      "gender": {
+        "male": null,
+        "female": null
+      },
+      "age": {
+        "00": null,
+        "21": null,
+        "59": null,
+        "60": null
+      },
+      "source": {
+        "local": null,
+        "imported": null
+      }
+    },
+    "death": 7,
+    "recovered": 19,
+    "total": 273
   }
 ]
