@@ -5,14 +5,14 @@ import {ResponsiveBar} from '@nivo/bar';
 
 const vitals = data.map(d => {
   return {
-    Recovered: d.recovered,
-    Death: d.death,
-    Active: d.active.total,
+    Recovered: d.recovered_new,
+    Death: d.death_new,
+    Cases: d.new,
     Date: d.date
   };
 });
 
-const keys = ['Recovered', 'Death', 'Active'];
+const keys = ['Cases'];
 const commonProps = {
   margin: {top: 60, right: 80, bottom: 60, left: 80},
   data: vitals,
@@ -25,7 +25,9 @@ const commonProps = {
   enableLabel: false,
   axisBottom: {
     tickRotation: -45
-  }
+  },
+  groupMode: 'grouped'
+
 };
 
 const MainContainer = () => {
@@ -37,7 +39,7 @@ const MainContainer = () => {
         textAlign={'center'}
         fontWeight='500'
         color='white'>
-        All Cases
+        New Cases
       </Text>
       <Box __css={{height: 500}}>
         <ResponsiveBar

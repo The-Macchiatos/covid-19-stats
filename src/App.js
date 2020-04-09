@@ -4,8 +4,15 @@ import data from './data/stats.json';
 import MainContainer from './components/MainContainer';
 import CardBox from './components/CoronaCards';
 import AllCases from './components/Charts/AllCases';
+import NewCases from './components/Charts/NewCases';
 
 function App() {
+
+  const active = data[data.length - 1]['active']['total'];
+  const recovered = data[data.length - 1]['recovered'];
+  const deceased = data[data.length - 1]['death'];
+  const total = active + recovered + deceased;
+
   const cardData = [
     {
       name: 'Active Cases',
@@ -24,7 +31,7 @@ function App() {
     },
     {
       name: 'Total',
-      cases: data[data.length - 1]['total'],
+      cases: total,
       logo: 'people'
     }
   ];
@@ -47,6 +54,7 @@ function App() {
         </Flex>
       </MainContainer>
       <AllCases/>
+      <NewCases/>
     </>
 
   );

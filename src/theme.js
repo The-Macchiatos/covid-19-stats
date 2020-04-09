@@ -10,7 +10,7 @@ export const theme = {
     },
     fonts: {
         body: 'system-ui, sans-serif',
-        heading: 'inherit',
+        heading: 'system-ui, sans-serif',
         monospace: 'Menlo, monospace',
     },
     fontSizes: [
