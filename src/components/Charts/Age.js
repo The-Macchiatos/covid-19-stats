@@ -3,6 +3,7 @@ import {Text, Box} from '../base';
 import data from '../../data/summary.json';
 import { ResponsivePie } from '@nivo/pie'
 import useCurrentScreen from '../../utils/getResizedScreen';
+import {styles} from "./styles";
 
 
 const legends = {

@@ -4,6 +4,7 @@ import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
+import {styles} from "./styles";
 
 const vitals = data.map(d => {
   return {
@@ -68,7 +69,7 @@ const MainContainer = () => {
   let isMobile = useCurrentScreen();
   const barProps = isMobile ? mobileProps : commonProps;
   return (
-    <>
+    <Box __css={styles}>
       <Text
         fontSize={[2, 2, 3, 4]}
         sx={{
@@ -86,7 +87,7 @@ const MainContainer = () => {
           theme={theme}
         />
       </Box>
-    </>
+    </Box>
   );
 };
 

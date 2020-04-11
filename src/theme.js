@@ -6,6 +6,7 @@ export const theme = {
         primary: '#2d8daa',
         secondary: '#57b0cd',
         success: '#a8dcf3',
+        danger: '#2d8daa',
         muted: '#f6f6f9',
         gray: '#dddddf',
         highlight: 'hsla(205, 100%, 40%, 0.125)',

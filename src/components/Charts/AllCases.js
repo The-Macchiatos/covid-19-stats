@@ -4,6 +4,7 @@ import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
+import {styles} from "./styles";
 
 const vitals = data.map(d => {
   return {
@@ -99,23 +100,13 @@ const MainContainer = () => {
   let isMobile = useCurrentScreen();
   const barProps = isMobile ? mobileProps : commonProps;
 
-  const styles = {
-    width: '100%',
-    textAlign: 'center',
-    backgroundColor: '#003e50',
-    overflow: 'hidden',
-    borderRadius: '8px',
-    ':hover': {
-      backgroundColor: 'rgb(51,	58,	86)',
-      cursor: 'pointer'
-    }
-  };
+
 
   return (
     <Box __css={styles}>
       <Text
         fontSize={[2, 2, 3, 4]}
-        mt={'30'}
+        mt={40}
         textAlign={'center'}
         fontWeight='500'
         color='white'>

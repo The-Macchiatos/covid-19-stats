@@ -10,11 +10,11 @@ import Tiles from "./components/layout";
 import {cardData} from "./utils/processedData";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretUp, faCaretDown, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css';
 
-library.add(faCaretUp, faCaretDown);
+library.add(faCaretUp, faCaretDown, faMinus);
 
 
 function App() {
