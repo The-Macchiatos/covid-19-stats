@@ -1,17 +1,17 @@
 export const theme = {
-    googleFonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700&display=swap',
+    googleFonts: 'https://fonts.googleapis.com/css?family=Muli+Mono|Muli:400,700&display=swap',
     colors: {
         text: '#fff',
-        background: '#121420',
-        primary: '#07c',
-        secondary: '#30c',
-        success: '#9cf4f1',
+        background: '#00141b',
+        primary: '#2d8daa',
+        secondary: '#57b0cd',
+        success: '#a8dcf3',
         muted: '#f6f6f9',
         gray: '#dddddf',
         highlight: 'hsla(205, 100%, 40%, 0.125)',
     },
     fonts: {
-        body: 'Roboto, sans-serif',
+        body: 'Muli, sans-serif',
         heading: 'inherit',
         monospace: '"Roboto Mono", monospace',
     },

@@ -20,7 +20,6 @@ const commonProps = {
   data: vitals,
   indexBy: 'Date',
   keys,
-  padding: 0.5,
   enableGridY: false,
   labelSkipWidth: 16,
   labelSkipHeight: 16,

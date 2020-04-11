@@ -12,15 +12,12 @@ import {cardData} from "./utils/processedData";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
+import './style.css';
+
 library.add(faCaretUp, faCaretDown);
 
 
 function App() {
-
-
-  useEffect(() => {
-    document.getElementsByTagName('html')[0].style.backgroundColor = '#1E202A';
-  });
 
   return (
     <>

@@ -7,7 +7,7 @@ import Image from "./base/Image";
 const styles = {
   width: '100%',
   textAlign: 'center',
-  backgroundColor: '#252A41',
+  backgroundColor: '#003e50',
   overflow: 'hidden',
   borderRadius: '8px',
   ':hover': {
@@ -19,9 +19,9 @@ const styles = {
 const CardBox = ({text, cases, cases_prev, ...props}) => {
   return (
     <Box mb={4} key={props.key} __css={styles}>
-      <Flex alignItems='center' justifyContent='center'>
+{/*      <Flex alignItems='center' justifyContent='center'>
         <Image mt='3' height={'3.4rem'} mb='2' alt={`flaticon-${props.logo}`} src={`./icon-${props.logo}.svg`}/>
-      </Flex>
+      </Flex>*/}
       <Text
         fontSize={6}
         color='#FFFFFF'>
