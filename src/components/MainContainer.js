@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Heading, Image, Flex, Box} from './base';
+import {Text, Heading, Flex, Box} from './base';
 
 const styles = {
   maxWidth: '1440px',
@@ -31,7 +31,7 @@ const MainContainer = ({children}) => {
           mt={'20'}
           fontWeight='500'
           color='white'>
-          Newest update: April 9
+          Updated on: April 11
         </Text>
       </Flex>
       {children}

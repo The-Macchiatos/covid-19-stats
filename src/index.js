@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components'
 ReactDOM.render(
   <React.StrictMode>
       <ThemeProvider theme={theme}>
-        <App />
+        <App theme={theme}/>
       </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

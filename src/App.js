@@ -9,7 +9,6 @@ import Origin from "./components/Charts/Origin";
 import Tiles from "./components/layout";
 import {cardData} from "./utils/processedData";
 
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +16,6 @@ library.add(faCaretUp, faCaretDown);
 
 
 function App() {
-
 
 
   useEffect(() => {

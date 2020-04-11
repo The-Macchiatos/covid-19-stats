@@ -2,9 +2,41 @@ import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/summary.json';
 import { ResponsivePie } from '@nivo/pie'
+import useCurrentScreen from '../../utils/getResizedScreen';
 
+const legends = {
+  anchor: 'bottom',
+  direction: 'row',
+  translateY: 20,
+  itemWidth: 100,
+  itemHeight: 18,
+  itemTextColor: '#ffffff',
+  symbolSize: 18,
+  symbolShape: 'circle',
+  effects: [
+    {
+      on: 'hover',
+      style: {
+        itemOpacity: '#ffffff'
+      }
+    }
+  ]
+};
+
+const commonProps = {
+  margin: { top: 0, right: 80, bottom: 30, left: 90 },
+  legends: [{...legends}]
+};
+
+const mobileProps = {
+  margin: { top: 20, right: 0, bottom: 120, left: 0 },
+  legends: [{...legends,  translateY: 35}]
+};
 
 const Gender = () => {
+  let isMobile = useCurrentScreen();
+  const pieProps = isMobile ? mobileProps : commonProps;
+
     const gender = [{
             "id": "male",
             "label": "Male",
@@ -21,10 +53,12 @@ const Gender = () => {
 
     return (
         <>
-            <Box __css={{height: 500}}>
+            <Box __css={isMobile ? {height: 305} : {height: 320}}>
                 <Text
                     fontSize={[2, 2, 3, 4]}
-                    mt={'30'}
+                    sx={{
+                      mt: 40
+                    }}
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>
@@ -32,7 +66,6 @@ const Gender = () => {
                 </Text>
                 <ResponsivePie
                     data={gender}
-                    margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                     innerRadius={0.5}
                     padAngle={0.7}
                     cornerRadius={3}
@@ -64,26 +97,7 @@ const Gender = () => {
                             }
                         }
                     ]}
-                    legends={[
-                        {
-                            anchor: 'bottom',
-                            direction: 'row',
-                            translateY: 56,
-                            itemWidth: 100,
-                            itemHeight: 18,
-                            itemTextColor: '#999',
-                            symbolSize: 18,
-                            symbolShape: 'circle',
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemTextColor: '#000'
-                                    }
-                                }
-                            ]
-                        }
-                    ]}
+                    {...pieProps}
                 />
             </Box>
         </>

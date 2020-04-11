@@ -1,6 +1,6 @@
 [
   {
-    "date": "18/03/2020",
+    "date": "18 Mar 20",
     "new": 3,
     "active": {
       "total": 3,
@@ -25,7 +25,7 @@
     "recovered_new": 0
   },
   {
-    "date": "19/03/2020",
+    "date": "19 Mar 20",
     "new": 4,
     "active": {
       "total": 7,
@@ -50,7 +50,7 @@
     "recovered_new": 0
   },
   {
-    "date": "20/03/2020",
+    "date": "20 Mar 20",
     "new": 5,
     "active": {
       "total": 12,
@@ -75,7 +75,7 @@
     "recovered_new": 0
   },
   {
-    "date": "21/03/2020",
+    "date": "21 Mar 20",
     "new": 2,
     "active": {
       "total": 13,
@@ -100,7 +100,7 @@
     "recovered_new": 0
   },
   {
-    "date": "22/03/2020",
+    "date": "22 Mar 20",
     "new": 14,
     "active": {
       "total": 26,
@@ -125,7 +125,7 @@
     "recovered_new": 0
   },
   {
-    "date": "23/03/2020",
+    "date": "23 Mar 20",
     "new": 8,
     "active": {
       "total": 34,
@@ -150,7 +150,7 @@
     "recovered_new": 0
   },
   {
-    "date": "24/03/2020",
+    "date": "24 Mar 20",
     "new": 6,
     "active": {
       "total": 40,
@@ -175,7 +175,7 @@
     "recovered_new": 0
   },
   {
-    "date": "25/03/2020",
+    "date": "25 Mar 20",
     "new": 6,
     "active": {
       "total": 46,
@@ -200,7 +200,7 @@
     "recovered_new": 0
   },
   {
-    "date": "26/03/2020",
+    "date": "26 Mar 20",
     "new": 33,
     "active": {
       "total": 79,
@@ -225,7 +225,7 @@
     "recovered_new": 0
   },
   {
-    "date": "27/03/2020",
+    "date": "27 Mar 20",
     "new": 13,
     "active": {
       "total": 92,
@@ -250,7 +250,7 @@
     "recovered_new": 0
   },
   {
-    "date": "28/03/2020",
+    "date": "28 Mar 20",
     "new": 8,
     "active": {
       "total": 100,
@@ -275,7 +275,7 @@
     "recovered_new": 0
   },
   {
-    "date": "29/03/2020",
+    "date": "29 Mar 20",
     "new": 5,
     "active": {
       "total": 105,
@@ -300,7 +300,7 @@
     "recovered_new": 0
   },
   {
-    "date": "30/03/2020",
+    "date": "30 Mar 20",
     "new": 21,
     "active": {
       "total": 125,
@@ -325,7 +325,7 @@
     "recovered_new": 0
   },
   {
-    "date": "31/03/2020",
+    "date": "31 Mar 20",
     "new": 15,
     "active": {
       "total": 138,
@@ -350,7 +350,7 @@
     "recovered_new": 0
   },
   {
-    "date": "01/04/2020",
+    "date": "01 Apr 20",
     "new": 18,
     "active": {
       "total": 155,
@@ -375,7 +375,7 @@
     "recovered_new": 0
   },
   {
-    "date": "02/04/2020",
+    "date": "02 Apr 20",
     "new": 8,
     "active": {
       "total": 162,
@@ -400,7 +400,7 @@
     "recovered_new": 0
   },
   {
-    "date": "03/04/2020",
+    "date": "03 Apr 20",
     "new": 17,
     "active": {
       "total": 179,
@@ -425,7 +425,7 @@
     "recovered_new": 0
   },
   {
-    "date": "04/04/2020",
+    "date": "04 Apr 20",
     "new": 10,
     "active": {
       "total": 189,
@@ -450,7 +450,7 @@
     "recovered_new": 0
   },
   {
-    "date": "05/04/2020",
+    "date": "05 Apr 20",
     "new": 31,
     "active": {
       "total": 220,
@@ -475,7 +475,7 @@
     "recovered_new": 0
   },
   {
-    "date": "06/04/2020",
+    "date": "06 Apr 20",
     "new": 17,
     "active": {
       "total": 233,
@@ -500,7 +500,7 @@
     "recovered_new": 4
   },
   {
-    "date": "07/04/2020",
+    "date": "07 Apr 20",
     "new": 24,
     "active": {
       "total": 253,
@@ -525,7 +525,7 @@
     "recovered_new": 4
   },
   {
-    "date": "08/04/2020",
+    "date": "08 Apr 20",
     "new": 5,
     "active": {
       "total": 247,
@@ -550,7 +550,7 @@
     "recovered_new": 11
   },
   {
-    "date": "09/04/2020",
+    "date": "09 Apr 20",
     "new": 41,
     "active": {
       "total": 284,
@@ -575,7 +575,7 @@
     "recovered_new": 4
   },
   {
-    "date": "10/04/2020",
+    "date": "10 Apr 20",
     "new": 4,
     "active": {
       "total": 286,
