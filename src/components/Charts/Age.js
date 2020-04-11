@@ -2,41 +2,75 @@ import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/summary.json';
 import { ResponsivePie } from '@nivo/pie'
+import useCurrentScreen from '../../utils/getResizedScreen';
 
+
+const legends = {
+  anchor: 'bottom',
+  direction: 'row',
+  translateY: 25,
+  itemWidth: 80,
+  itemHeight: 18,
+  itemTextColor: '#ffffff',
+  symbolSize: 18,
+  symbolShape: 'circle',
+  effects: [
+    {
+      on: 'hover',
+      style: {
+        itemOpacity: '#ffffff'
+      }
+    }
+  ]
+};
+
+const commonProps = {
+  margin: { top: 0, right: 80, bottom: 30, left: 90 },
+  legends: [{...legends}]
+};
+
+const mobileProps = {
+  margin: { top: 20, right: 0, bottom: 120, left: 13 },
+  legends: [{...legends,  translateY: 50}]
+};
 
 const Age = () => {
+  let isMobile = useCurrentScreen();
+  const pieProps = isMobile ? mobileProps : commonProps;
     const age = [{
-            "id": "0020",
+            "id": "<20",
             "label": "<20",
-            "value": data.age['0020'],
+            "value": data.age['20'],
             "color": "hsl(259, 70%, 50%)"
         },
         {
-            "id": "2139",
+            "id": "21-39",
             "label": "21 - 39",
-            "value": data.age['2139'],
+            "value": data.age['21-39'],
             "color": "hsl(259, 70%, 50%)"
         },
         {
-            "id": "4059",
+            "id": "40-59",
             "label": "40 - 59",
-            "value": data.age['4059'],
+            "value": data.age['40-59'],
             "color": "hsl(259, 70%, 50%)"
         },
         {
-            "id": "6000",
+            "id": "60+",
             "label": "60+",
-            "value": data.age['6000'],
+            "value": data.age['60'],
             "color": "hsl(259, 70%, 50%)"
         }
     ];
 
     return (
         <>
-            <Box __css={{height: 500}}>
+            <Box __css={isMobile ? {height: 305} : {height: 320}}>
                 <Text
                     fontSize={[2, 2, 3, 4]}
-                    mt={'30'}
+                    sx={{
+                      mt: 40
+                    }}
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>
@@ -44,7 +78,6 @@ const Age = () => {
                 </Text>
                 <ResponsivePie
                     data={age}
-                    margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                     innerRadius={0.5}
                     padAngle={0.7}
                     cornerRadius={3}
@@ -67,45 +100,26 @@ const Age = () => {
                     fill={[
                         {
                             match: {
-                                id: '0020'
+                                id: '20'
                             }
                         },
                         {
                             match: {
-                                id: '2139'
+                                id: '21-39'
                             }
                         },
                         {
                             match: {
-                                id: '4059'
+                                id: '40-59'
                             }
                         },
                         {
                             match: {
-                                id: '6000'
+                                id: '60'
                             }
                         }
                     ]}
-                    legends={[
-                        {
-                            anchor: 'bottom',
-                            direction: 'row',
-                            translateY: 56,
-                            itemWidth: 100,
-                            itemHeight: 18,
-                            itemTextColor: '#999',
-                            symbolSize: 18,
-                            symbolShape: 'circle',
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemTextColor: '#000'
-                                    }
-                                }
-                            ]
-                        }
-                    ]}
+                    {...pieProps}
                 />
             </Box>
         </>
