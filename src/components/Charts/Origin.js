@@ -7,7 +7,7 @@ import useCurrentScreen from '../../utils/getResizedScreen';
 const legends = {
   anchor: 'bottom',
   direction: 'row',
-  translateY: 20,
+  translateY: 25,
   itemWidth: 100,
   itemHeight: 18,
   itemTextColor: '#ffffff',
@@ -24,11 +24,13 @@ const legends = {
 };
 
 const commonProps = {
+  radialLabelsLinkHorizontalLength: 24,
   margin: { top: 0, right: 80, bottom: 30, left: 90 },
   legends: [{...legends}]
 };
 
 const mobileProps = {
+  radialLabelsLinkHorizontalLength: 14,
   margin: { top: 20, right: 0, bottom: 120, left: 13 },
   legends: [{...legends,  translateY: 35}]
 };
@@ -77,7 +79,6 @@ const Origin = () => {
                     radialLabelsTextColor="#ffffff"
                     radialLabelsLinkOffset={0}
                     radialLabelsLinkDiagonalLength={16}
-                    radialLabelsLinkHorizontalLength={24}
                     radialLabelsLinkStrokeWidth={1}
                     radialLabelsLinkColor={{ from: 'color' }}
                     slicesLabelsSkipAngle={10}

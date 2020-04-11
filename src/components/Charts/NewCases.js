@@ -3,13 +3,14 @@ import {Text, Box} from '../base';
 import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
+import moment from 'moment';
 
 const vitals = data.map(d => {
   return {
     Recovered: d.recovered_new,
     Death: d.death_new,
     Cases: d.new,
-    Date: d.date
+    Date: moment(d.date, 'DD-MM-YYYY').format('MMM D')
   };
 });
 

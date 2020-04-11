@@ -8,7 +8,7 @@ import useCurrentScreen from '../../utils/getResizedScreen';
 const legends = {
   anchor: 'bottom',
   direction: 'row',
-  translateY: 20,
+  translateY: 25,
   itemWidth: 80,
   itemHeight: 18,
   itemTextColor: '#ffffff',
