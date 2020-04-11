@@ -2,31 +2,27 @@ import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
+import moment from "moment";
 
 const vitals = data.map(d => {
   return {
     Recovered: d.recovered_new,
     Death: d.death_new,
     Cases: d.new,
-    Date: d.date
+    Date: moment(d.date, 'DD/MM/YYYY').format('DD/MM')
   };
 });
 
-const keys = ['Cases'];
+const keys = ['Cases', 'Death', 'Recovered'];
 const commonProps = {
-  margin: {top: 60, right: 80, bottom: 60, left: 80},
+  margin: {top: 60, right: 40, bottom: 60, left: 40},
   data: vitals,
   indexBy: 'Date',
   keys,
-  padding: 0.5,
   enableGridY: false,
-  labelSkipWidth: 16,
-  labelSkipHeight: 16,
   enableLabel: false,
-  axisBottom: {
-    tickRotation: -45
-  },
-  groupMode: 'grouped'
+  groupMode: 'grouped',
+  labelsTextColor: '#ffffff'
 
 };
 
@@ -44,7 +40,7 @@ const MainContainer = () => {
       <Box __css={{height: 250}}>
         <ResponsiveBar
           {...commonProps}
-          colors={{scheme: 'set2'}}
+          colors={{scheme: 'accent'}}
         />
       </Box>
     </>

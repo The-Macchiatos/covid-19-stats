@@ -2,30 +2,26 @@ import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
+import moment from "moment";
 
 const vitals = data.map(d => {
   return {
     Recovered: d.recovered,
     Death: d.death,
     Active: d.active.total,
-    Date: d.date
+    Date:  moment(d.date, 'DD/MM/YYYY').format('DD/MM')
   };
 });
 
-const keys = ['Recovered', 'Death', 'Active'];
+const keys = ['Death', 'Recovered', 'Active'];
 const commonProps = {
-  margin: {top: 60, right: 80, bottom: 60, left: 80},
+  margin: {top: 60, right: 40, bottom: 60, left: 40},
   data: vitals,
   indexBy: 'Date',
   keys,
-  padding: 0.5,
   enableGridY: false,
-  labelSkipWidth: 16,
-  labelSkipHeight: 16,
   enableLabel: false,
-  axisBottom: {
-    tickRotation: -45
-  }
+
 };
 
 const MainContainer = () => {
@@ -42,7 +38,31 @@ const MainContainer = () => {
       <Box __css={{height: 400}}>
         <ResponsiveBar
           {...commonProps}
-          colors={{scheme: 'set2'}}
+          colors={{scheme: 'accent'}}
+          legends={[
+            {
+              dataFrom: 'keys',
+              anchor: 'top',
+              direction: 'row',
+              justify: false,
+              translateX: 0,
+              translateY: -42,
+              itemsSpacing: 2,
+              itemWidth: 100,
+              itemHeight: 20,
+              itemDirection: 'left-to-right',
+              itemOpacity: 0.85,
+              symbolSize: 20,
+              effects: [
+                {
+                  on: 'hover',
+                  style: {
+                    itemOpacity: 1
+                  }
+                }
+              ]
+            }]
+          }
         />
       </Box>
     </>

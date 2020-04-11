@@ -1,7 +1,7 @@
 export const theme = {
     googleFonts: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700&display=swap',
     colors: {
-        text: '#000',
+        text: '#fff',
         background: '#121420',
         primary: '#07c',
         secondary: '#30c',
