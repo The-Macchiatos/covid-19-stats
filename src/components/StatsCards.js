@@ -7,12 +7,11 @@ import Image from "./base/Image";
 const styles = {
     width: '100%',
     textAlign: 'center',
-    backgroundColor: 'rgba(0,62,80, 0.5)',
+    backgroundColor: 'rgba(31,41,51, 0.5)',
     overflow: 'hidden',
     borderRadius: '8px',
-    cursor: 'pointer',
     ':hover': {
-        backgroundColor: 'rgba(0,62,80, 0.8)'
+        backgroundColor: 'rgba(31,41,51, 0.8)'
     }
 };
 
