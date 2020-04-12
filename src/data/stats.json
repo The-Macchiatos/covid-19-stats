@@ -623,5 +623,30 @@
     "death_new": 0,
     "recovered": 28,
     "recovered_new": 5
+  },
+  {
+    "date": "12/04/2020",
+    "new": 5,
+    "active": {
+      "total": 273,
+      "gender": {
+        "male": null,
+        "female": null
+      },
+      "age": {
+        "21": null,
+        "59": null,
+        "60": null,
+        "00": null
+      },
+      "source": {
+        "local": null,
+        "imported": null
+      }
+    },
+    "death": 9,
+    "death_new": 0,
+    "recovered": 42,
+    "recovered_new": 14
   }
 ]

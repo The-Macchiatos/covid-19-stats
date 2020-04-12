@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
-import {styles} from "./styles";
+import {defs, styles} from "./styles";
+import Button from "../base/Button";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const vitals = data.map(d => {
   return {
@@ -44,6 +46,7 @@ const legends = {
 
 const commonProps = {
   margin: {top: 60, right: 80, bottom: 60, left: 80},
+  padding: 0.5,
   data: vitals,
   indexBy: 'Date',
   keys,
@@ -54,7 +57,7 @@ const commonProps = {
   axisBottom: {
     tickRotation: -45
   },
-  legends: [{...legends}]
+  legends: [{...legends}],
 };
 
 const theme = {
@@ -96,7 +99,18 @@ const mobileProps = {
 };
 
 
+
+
 const MainContainer = () => {
+  const [groupMode, setGroupMode] = useState('stacked');
+
+  const toggle = () => {
+
+    setGroupMode(groupMode === 'grouped' ? 'stacked' : 'grouped');
+    console.log('happening');
+  };
+
+
   let isMobile = useCurrentScreen();
   const barProps = isMobile ? mobileProps : commonProps;
 
@@ -111,12 +125,23 @@ const MainContainer = () => {
         fontWeight='500'
         color='white'>
         All Cases
+
       </Text>
+      <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>
+
       <Box __css={{height: 400}}>
         <ResponsiveBar
           {...barProps}
           colors={{scheme: 'set2'}}
           theme={theme}
+          groupMode={groupMode}
+          defs={defs}
+          fill={[
+            // match using object query
+            { match: { id: 'Recovered' }, id: 'gradientA' },
+            { match: { id: 'Active' }, id: 'gradientB' },
+            { match: { id: 'Death' }, id: 'gradientC' },
+          ]}
         />
       </Box>
     </Box>

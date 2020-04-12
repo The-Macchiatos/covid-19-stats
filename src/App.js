@@ -18,12 +18,12 @@ import {
     faViruses,
     faHeartbeat,
     faShieldVirus,
-    faLungsVirus,
+    faLungsVirus, faChartBar,
 } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css';
 
-library.add(faCaretUp, faCaretDown, faMinus, faVirus, faViruses, faHeartbeat, faShieldVirus, faLungsVirus);
+library.add(faCaretUp, faCaretDown, faMinus, faVirus, faViruses, faHeartbeat, faShieldVirus, faLungsVirus, faChartBar);
 
 
 function App() {

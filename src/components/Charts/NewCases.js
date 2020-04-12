@@ -4,7 +4,7 @@ import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
-import {styles} from "./styles";
+import {defs, styles} from "./styles";
 
 const vitals = data.map(d => {
   return {
@@ -27,8 +27,7 @@ const commonProps = {
   enableLabel: false,
   axisBottom: {
     tickRotation: -45
-  },
-  groupMode: 'grouped'
+  }
 
 };
 
@@ -85,6 +84,13 @@ const MainContainer = () => {
           {...barProps}
           colors={{scheme: 'set2'}}
           theme={theme}
+          defs={defs}
+          fill={[
+            // match using object query
+            { match: { id: 'Recovered' }, id: 'gradientA' },
+            { match: { id: 'Cases' }, id: 'gradientB' },
+            { match: { id: 'Death' }, id: 'gradientC' },
+          ]}
         />
       </Box>
     </Box>
