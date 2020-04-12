@@ -41,26 +41,22 @@ const Age = () => {
     const age = [{
             "id": "<20",
             "label": "<20",
-            "value": data.age['20'],
-            "color": "hsl(259, 70%, 50%)"
+            "value": data.age['20']
         },
         {
             "id": "21-39",
             "label": "21 - 39",
-            "value": data.age['21-39'],
-            "color": "hsl(259, 70%, 50%)"
+            "value": data.age['21-39']
         },
         {
             "id": "40-59",
             "label": "40 - 59",
-            "value": data.age['40-59'],
-            "color": "hsl(259, 70%, 50%)"
+            "value": data.age['40-59']
         },
         {
             "id": "60+",
             "label": "60+",
-            "value": data.age['60'],
-            "color": "hsl(259, 70%, 50%)"
+            "value": data.age['60']
         }
     ];
 

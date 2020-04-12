@@ -15,7 +15,7 @@ const styles = {
     }
 };
 
-const CardBox = ({text, cases, cases_prev, ...props}) => {
+const CardBox = ({text, cases, cases_prev, percentage, ...props}) => {
 
     const isNegative = cases - cases_prev < 0;
     const isZero = cases - cases_prev === 0;
@@ -37,13 +37,26 @@ const CardBox = ({text, cases, cases_prev, ...props}) => {
         {text}
       </Text>
 
-        <Text
-            color={isNegative ? 'danger' : 'success'}
-            py={2}
+        <Flex
+            justifyContent={'center'}
         >
-            {!isZero && <><FontAwesomeIcon icon={isNegative ? 'caret-down' : 'caret-up' }/> {isNegative ? (0 - (cases - cases_prev)) : (cases -cases_prev)}</>}
-            {isZero && <FontAwesomeIcon icon="minus"/>}
-        </Text>
+            <Text
+                color={isNegative ? 'danger' : 'success'}
+                p={2}
+            >
+                {!isZero && <><FontAwesomeIcon icon={isNegative ? 'caret-down' : 'caret-up' }/> {isNegative ? (0 - (cases - cases_prev)) : (cases -cases_prev)}</>}
+                {isZero && <FontAwesomeIcon icon="minus"/>}
+            </Text>
+            <Text
+                color={'white'}
+                p={2}
+            >
+                {percentage && `${Number(percentage).toFixed(2)} %` }
+            </Text>
+        </Flex>
+
+
+
     </Box>
   );
 };

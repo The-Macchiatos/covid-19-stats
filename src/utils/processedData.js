@@ -5,19 +5,22 @@ const cardData = [
         name: 'Active Cases',
         cases: getDataForDay(1)['active'],
         cases_prev: getDataForDay(2)['active'],
-        logo: 'lungs-virus'
+        logo: 'lungs-virus',
+        percentage: getDataForDay(1)['active'] / getDataForDay(1)['total'] * 100
     },
     {
         name: 'Recovered',
         cases: getDataForDay(1)['recovered'],
         cases_prev: getDataForDay(2)['recovered'],
-        logo: 'shield-virus'
+        logo: 'shield-virus',
+        percentage: getDataForDay(1)['recovered'] / getDataForDay(1)['total'] * 100
     },
     {
         name: 'Deceased',
         cases: getDataForDay(1)['death'],
         cases_prev: getDataForDay(2)['death'],
-        logo: 'heartbeat'
+        logo: 'heartbeat',
+        percentage: getDataForDay(1)['death'] / getDataForDay(1)['total'] * 100
     },
     {
         name: 'Total',
