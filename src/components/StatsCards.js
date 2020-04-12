@@ -27,7 +27,7 @@ const CardBox = ({text, cases, cases_prev, ...props}) => {
       <Text
         fontSize={6}
         color='#FFFFFF'>
-        {cases}
+          <FontAwesomeIcon size="1x" icon={props.logo}/> {cases}
       </Text>
       <Text
         fontSize={1}

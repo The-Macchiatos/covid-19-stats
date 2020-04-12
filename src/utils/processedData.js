@@ -5,25 +5,25 @@ const cardData = [
         name: 'Active Cases',
         cases: getDataForDay(1)['active'],
         cases_prev: getDataForDay(2)['active'],
-        logo: 'active'
+        logo: 'lungs-virus'
     },
     {
         name: 'Recovered',
         cases: getDataForDay(1)['recovered'],
         cases_prev: getDataForDay(2)['recovered'],
-        logo: 'recovered'
+        logo: 'shield-virus'
     },
     {
         name: 'Deceased',
         cases: getDataForDay(1)['death'],
         cases_prev: getDataForDay(2)['death'],
-        logo: 'deceased'
+        logo: 'heartbeat'
     },
     {
         name: 'Total',
         cases: getDataForDay(1)['total'],
         cases_prev: getDataForDay(2)['total'],
-        logo: 'people'
+        logo: 'viruses'
     }
 ];
 
