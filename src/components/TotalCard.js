@@ -87,11 +87,11 @@ const TotalCard = () => {
 
     return (
         <Box __css={styles} pb={4}>
-            <Flex pb={5}>
+            <Flex pb={5} px={4} textAlign="center">
                 <Text
                     fontSize={[2, 2, 5, 5]}
                     mt={20}
-                    ml={40}
+                    pr={4}
                     textAlign="center"
                     fontWeight='500'
                     color='white'>
@@ -107,7 +107,7 @@ const TotalCard = () => {
                 <Text
                     fontSize={[2, 2, 5, 5]}
                     mt={20}
-                    ml={40}
+                    pr={4}
                     fontWeight='500'
                     textAlign="center"
                     color='white'>
@@ -123,7 +123,6 @@ const TotalCard = () => {
                 <Text
                     fontSize={[2, 2, 5, 5]}
                     mt={20}
-                    ml={40}
                     fontWeight='500'
                     textAlign="center"
                     color='white'>
