@@ -22,6 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css';
+import Box from "./components/base/Box";
 
 library.add(faCaretUp, faCaretDown, faMinus, faVirus, faViruses, faHeartbeat, faShieldVirus, faLungsVirus, faChartBar);
 
@@ -31,14 +32,22 @@ function App() {
   return (
     <>
       <MainContainer>
-          <Tiles columns={[1, 2, 4]} mb={4}>
-              {cardData.map((item, key) => (
-                  <CardBox
-                      key={key}
-                      text={item.name}
-                      {...item}
-                  />))
-              }
+          <Tiles columns={[1, 2, 2]} mb={4}>
+              <Box>
+
+              </Box>
+              <Box>
+                  <Tiles columns={[1, 2, 2]} mb={4}>
+                  {cardData.map((item, key) => (
+                      <CardBox
+                          key={key}
+                          text={item.name}
+                          {...item}
+                      />))
+                  }
+                  </Tiles>
+              </Box>
+
           </Tiles>
           <AllCases/>
           <NewCases/>
