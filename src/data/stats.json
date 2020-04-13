@@ -622,7 +622,9 @@
     "death": 9,
     "death_new": 0,
     "recovered": 28,
-    "recovered_new": 5
+    "recovered_new": 5,
+    "critical": 3,
+    "critical_new": 0
   },
   {
     "date": "12/04/2020",
@@ -647,6 +649,35 @@
     "death": 9,
     "death_new": 0,
     "recovered": 42,
-    "recovered_new": 14
+    "recovered_new": 14,
+    "critical": 3,
+    "critical_new": 0
+  },
+  {
+    "date": "13/04/2020",
+    "new": 0,
+    "active": {
+      "total": 273,
+      "gender": {
+        "male": null,
+        "female": null
+      },
+      "age": {
+        "21": null,
+        "59": null,
+        "60": null,
+        "00": null
+      },
+      "source": {
+        "local": null,
+        "imported": null
+      }
+    },
+    "death": 9,
+    "death_new": 0,
+    "recovered": 42,
+    "recovered_new": 0,
+    "critical": 3,
+    "critical_new": 0
   }
 ]

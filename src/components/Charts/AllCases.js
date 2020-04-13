@@ -7,99 +7,88 @@ import moment from 'moment';
 import {defs, styles} from "./styles";
 import Button from "../base/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Chart from 'react-apexcharts'
 
-const vitals = data.map(d => {
-  return {
-    Recovered: d.recovered,
-    Death: d.death,
-    Active: d.active.total,
-    Date: moment(d.date, 'DD-MM-YYYY').format('MMM D')
-  };
-});
-
-const keys = ['Recovered', 'Death', 'Active'];
-
-
-const legends = {
-  dataFrom: 'keys',
-  anchor: 'top',
-  direction: 'row',
-  justify: false,
-  translateX: 0,
-  translateY: -30,
-  itemsSpacing: 0,
-  itemWidth: 100,
-  itemHeight: 20,
-  itemDirection: 'left-to-right',
-  itemOpacity: 0.85,
-  itemTextColor: '#ffffff',
-  symbolSize: 20,
-  effects: [
-    {
-      on: 'hover',
-      style: {
-        itemOpacity: 1
-      }
-    }
-  ]
-};
-
-const commonProps = {
-  margin: {top: 60, right: 80, bottom: 60, left: 80},
-  padding: 0.5,
-  data: vitals,
-  indexBy: 'Date',
-  keys,
-  enableGridY: false,
-  labelSkipWidth: 16,
-  labelSkipHeight: 16,
-  enableLabel: false,
-  axisBottom: {
-    tickRotation: -45
-  },
-  legends: [{...legends}],
-};
-
-const theme = {
-  axis: {
-    fontSize: '14px',
-    tickColor: '#eee',
-    ticks: {
-      line: {
-        stroke: '#555555'
-      },
-      text: {
-        fill: '#ffffff'
-      }
+const options = {
+  chart: {
+    id: 'all-cases',
+    type: 'bar',
+    stacked: true,
+    toolbar: {
+      show: false
     },
-    legend: {
-      text: {
-        fill: '#aaaaaa'
-      }
-    }
+    zoom: {
+      enabled: true
+    },
+  },
+  colors:['#9e86ff', '#007ae1', '#1ca8dd'],
+  dataLabels: {
+    enabled: false
   },
   grid: {
-    line: {
-      stroke: '#555555'
+    borderColor: '#343863',
+    yaxis: {
+      lines: {
+        show: true
+      }
     }
-  }
-};
-
-const mobileProps = {
-  ...commonProps,
-  margin: {top: 30, right: -10, bottom: 90, left: 30},
-  axisBottom: {
-    tickRotation: -90
   },
-  legends: [{
-    ...legends,
-    anchor: 'top-left',
-    symbolSize: 10
-  }]
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      style: {
+        colors: 'white'
+      }
+    }
+  },
+  xaxis: {
+    type: 'datetime',
+    axisTicks: {
+      show: true,
+      borderType: 'solid',
+      color: '#007ae1',
+      height: 6,
+      offsetX: 0,
+      offsetY: 0
+    },
+    labels: {
+      show: true,
+      style: {
+        colors: 'white'
+      }
+    },
+    axisBorder: {
+      show: false
+    },
+    categories: data.map(d => moment(d.date, 'DD-MM-YYYY').format('MMM D'))
+  },
+  legend: {
+    position: 'top',
+    labels: {
+      colors: 'white',
+      useSeriesColors: false
+    },
+  },
 };
 
-
-
+const series =  [
+  {
+    name: 'Death',
+    data: data.map(d => d.death)
+  },
+  {
+    name: 'Recovered',
+    data: data.map(d => d.recovered)
+  },
+  {
+    name: 'Active',
+    data: data.map(d => d.active.total)
+  }];
 
 const MainContainer = () => {
   const [groupMode, setGroupMode] = useState('stacked');
@@ -109,11 +98,6 @@ const MainContainer = () => {
     setGroupMode(groupMode === 'grouped' ? 'stacked' : 'grouped');
     console.log('happening');
   };
-
-
-  let isMobile = useCurrentScreen();
-  const barProps = isMobile ? mobileProps : commonProps;
-
 
 
   return (
@@ -127,22 +111,10 @@ const MainContainer = () => {
         All Cases
 
       </Text>
-      <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>
+     {/* <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>*/}
 
-      <Box __css={{height: 400}}>
-        <ResponsiveBar
-          {...barProps}
-          colors={{scheme: 'set2'}}
-          theme={theme}
-          groupMode={groupMode}
-          defs={defs}
-          fill={[
-            // match using object query
-            { match: { id: 'Recovered' }, id: 'gradientA' },
-            { match: { id: 'Active' }, id: 'gradientB' },
-            { match: { id: 'Death' }, id: 'gradientC' },
-          ]}
-        />
+      <Box p="2">
+        <Chart options={options} series={series} type="bar" height={320} />
       </Box>
     </Box>
   );
