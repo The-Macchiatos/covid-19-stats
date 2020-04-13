@@ -23,19 +23,22 @@ const cardData = [
         percentage: getDataForDay(1)['death'] / getDataForDay(1)['total'] * 100
     },
     {
-        name: 'Total',
-        cases: getDataForDay(1)['total'],
-        cases_prev: getDataForDay(2)['total'],
-        logo: 'viruses'
+        name: 'Critical',
+        cases: getDataForDay(1)['critical'],
+        cases_prev: getDataForDay(2)['critical'],
+        logo: 'viruses',
+        percentage: getDataForDay(1)['critical'] / getDataForDay(1)['total'] * 100
     }
 ];
 
-function getDataForDay(index) {
+export function getDataForDay(index) {
     const active = data[data.length - index]['active']['total'];
     const recovered = data[data.length - index]['recovered'];
     const death = data[data.length - index]['death'];
+    const critical = data[data.length - index]['critical'];
     const total = active + recovered + death;
-    return {active, recovered, death, total}
+    const newCases = data[data.length - index]['new'];
+    return {active, recovered, death, critical, total, newCases}
 }
 
 export {cardData}

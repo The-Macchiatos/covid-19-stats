@@ -23,6 +23,8 @@ import {
 
 import './style.css';
 import Box from "./components/base/Box";
+import TotalCard from "./components/TotalCard";
+import {styles} from "./components/Charts/styles";
 
 library.add(faCaretUp, faCaretDown, faMinus, faVirus, faViruses, faHeartbeat, faShieldVirus, faLungsVirus, faChartBar);
 
@@ -32,9 +34,9 @@ function App() {
   return (
     <>
       <MainContainer>
-          <Tiles columns={[1, 2, 2]} mb={4}>
+          <Tiles columns={[1, 2, 2]} mb={1}>
               <Box>
-
+                  <TotalCard/>
               </Box>
               <Box>
                   <Tiles columns={[1, 2, 2]} mb={4}>
@@ -51,11 +53,14 @@ function App() {
           </Tiles>
           <AllCases/>
           <NewCases/>
-          <Tiles columns={[1, 1, 3]}>
-              <Origin/>
-              <Gender/>
-              <Age/>
-          </Tiles>
+          <Box __css={styles}>
+              <Tiles columns={[1, 1, 3]} >
+                  <Origin/>
+                  <Gender/>
+                  <Age/>
+              </Tiles>
+          </Box>
+
 
       </MainContainer>
 

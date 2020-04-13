@@ -9,15 +9,6 @@ import Button from "../base/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Chart from 'react-apexcharts'
 
-const vitals = data.map(d => {
-  return {
-    Recovered: d.recovered,
-    Death: d.death,
-    Active: d.active.total,
-    Date: moment(d.date, 'DD-MM-YYYY').format('MMM D')
-  };
-});
-
 const options = {
   chart: {
     id: 'all-cases',

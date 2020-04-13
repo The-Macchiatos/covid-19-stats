@@ -1,99 +1,122 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/stats.json';
 import {ResponsiveBar} from '@nivo/bar';
 import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
 import {defs, styles} from "./styles";
+import Button from "../base/Button";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Chart from 'react-apexcharts'
 
-const vitals = data.map(d => {
-  return {
-    Recovered: d.recovered_new,
-    Death: d.death_new,
-    Cases: d.new,
-    Date: moment(d.date, 'DD-MM-YYYY').format('MMM D')
-  };
-});
-
-const keys = ['Cases', 'Death', 'Recovered'];
-const commonProps = {
-  margin: {top: 0, right: 80, bottom: 60, left: 80},
-  data: vitals,
-  indexBy: 'Date',
-  keys,
-  enableGridY: false,
-  labelSkipWidth: 16,
-  labelSkipHeight: 16,
-  enableLabel: false,
-  axisBottom: {
-    tickRotation: -45
-  }
-
-};
-
-const mobileProps = {
-  ...commonProps,
-  margin: {top: 3, right: -10, bottom: 90, left: 30},
-  axisBottom: {
-    tickRotation: -90
-  }
-};
-
-const theme = {
-  axis: {
-    fontSize: '14px',
-    tickColor: '#eee',
-    ticks: {
-      line: {
-        stroke: '#555555'
-      },
-      text: {
-        fill: '#ffffff'
-      }
+const options = {
+  chart: {
+    id: 'all-cases',
+    type: 'bar',
+    stacked: true,
+    toolbar: {
+      show: false
     },
-    legend: {
-      text: {
-        fill: '#aaaaaa'
+    zoom: {
+      enabled: true
+    },
+  },
+  colors:['#9e86ff', '#007ae1', '#1ca8dd'],
+  dataLabels: {
+    enabled: false
+  },
+  grid: {
+    borderColor: '#343863',
+    yaxis: {
+      lines: {
+        show: true
       }
     }
   },
-  grid: {
-    line: {
-      stroke: '#555555'
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      style: {
+        colors: 'white'
+      }
     }
-  }
+  },
+  xaxis: {
+    type: 'datetime',
+    axisTicks: {
+      show: true,
+      borderType: 'solid',
+      color: '#007ae1',
+      height: 6,
+      offsetX: 0,
+      offsetY: 0
+    },
+    labels: {
+      show: true,
+      style: {
+        colors: 'white'
+      }
+    },
+    axisBorder: {
+      show: false
+    },
+    categories: data.map(d => moment(d.date, 'DD-MM-YYYY').format('MMM D'))
+  },
+  legend: {
+    position: 'top',
+    labels: {
+      colors: 'white',
+      useSeriesColors: false
+    },
+  },
 };
 
+const series =  [
+  {
+    name: 'Death',
+    data: data.map(d => d.death_new)
+  },
+  {
+    name: 'Recovered',
+    data: data.map(d => d.recovered_new)
+  },
+  {
+    name: 'Cases',
+    data: data.map(d => d.new)
+  }];
+
 const MainContainer = () => {
-  let isMobile = useCurrentScreen();
-  const barProps = isMobile ? mobileProps : commonProps;
+  const [groupMode, setGroupMode] = useState('stacked');
+
+  const toggle = () => {
+
+    setGroupMode(groupMode === 'grouped' ? 'stacked' : 'grouped');
+    console.log('happening');
+  };
+
+
   return (
-    <Box __css={styles}>
-      <Text
-        fontSize={[2, 2, 3, 4]}
-        sx={{
-          mt: 40
-        }}
-        textAlign={'center'}
-        fontWeight='500'
-        color='white'>
-        New Cases
-      </Text>
-      <Box __css={{height: 250}}>
-        <ResponsiveBar
-          {...barProps}
-          colors={{scheme: 'set2'}}
-          theme={theme}
-          defs={defs}
-          fill={[
-            // match using object query
-            { match: { id: 'Recovered' }, id: 'gradientA' },
-            { match: { id: 'Cases' }, id: 'gradientB' },
-            { match: { id: 'Death' }, id: 'gradientC' },
-          ]}
-        />
+      <Box __css={styles}>
+        <Text
+            fontSize={[2, 2, 3, 4]}
+            mt={40}
+            textAlign={'center'}
+            fontWeight='500'
+            color='white'>
+          New Cases
+
+        </Text>
+        {/* <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>*/}
+
+        <Box p="2">
+          <Chart options={options} series={series} type="bar" height={320} />
+        </Box>
       </Box>
-    </Box>
   );
 };
 
