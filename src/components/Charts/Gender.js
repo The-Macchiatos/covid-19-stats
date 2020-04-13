@@ -45,7 +45,7 @@ const Gender = () => {
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>
-                    Cases by age
+                    Cases by gender
                 </Text>
                 <Chart options={options}  type="donut" series={series}/>
 
