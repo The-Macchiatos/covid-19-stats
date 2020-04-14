@@ -594,6 +594,7 @@
         "imported": null
       }
     },
+    "overseas": 0,
     "death": 9,
     "death_new": 2,
     "recovered": 23,
@@ -619,6 +620,7 @@
         "imported": null
       }
     },
+    "overseas": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 28,
@@ -646,6 +648,7 @@
         "imported": null
       }
     },
+    "overseas": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 42,
@@ -673,6 +676,7 @@
         "imported": null
       }
     },
+    "overseas": 3,
     "death": 9,
     "death_new": 0,
     "recovered": 42,
@@ -684,7 +688,7 @@
     "date": "14/04/2020",
     "new": 0,
     "active": {
-      "total": 264,
+      "total": 261,
       "gender": {
         "male": null,
         "female": null
@@ -700,6 +704,7 @@
         "imported": null
       }
     },
+    "overseas": 3,
     "death": 9,
     "death_new": 0,
     "recovered": 51,
