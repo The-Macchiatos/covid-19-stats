@@ -15,10 +15,16 @@ const MainContainer = ({children}) => {
         <Box __css={{width: '100%'}}>
 
           <Heading
-              mb={4}
             fontSize={[2, 2, 4, 4]}
             color='white'>
             <FontAwesomeIcon icon="virus" size="1x"/> Covid-19 Mauritius
+          </Heading>
+          <Heading
+            mb={4}
+            fontSize={[1, 1, 3, 3]}
+            as={'h2'}
+            color='rgba(255,255,255,0.6)'>
+           Latest updates and live statistics
           </Heading>
         </Box>
       </Flex>

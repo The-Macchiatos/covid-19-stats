@@ -4,7 +4,7 @@ import Box from "./Box";
 const Heading = forwardRef((props, ref) =>
     <Box
         ref={ref}
-        as='h2'
+        as={props.as || 'h1'}
         tx='text'
         variant='heading'
         {...props}
