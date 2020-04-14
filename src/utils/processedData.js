@@ -36,8 +36,8 @@ export function getDataForDay(index) {
     const recovered = data[data.length - index]['recovered'];
     const death = data[data.length - index]['death'];
     const critical = data[data.length - index]['critical'];
-    const total = active + recovered + death;
     const newCases = data[data.length - index]['new'];
+    const total = active + recovered + death;
     return {active, recovered, death, critical, total, newCases}
 }
 

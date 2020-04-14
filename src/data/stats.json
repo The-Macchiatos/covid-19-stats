@@ -684,7 +684,7 @@
     "date": "14/04/2020",
     "new": 0,
     "active": {
-      "total": 261,
+      "total": 264,
       "gender": {
         "male": null,
         "female": null
@@ -704,7 +704,7 @@
     "death_new": 0,
     "recovered": 51,
     "recovered_new": 9,
-    "critical": 3,
+    "critical": 2,
     "critical_new": 0
   }
 ]
