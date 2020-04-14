@@ -7,6 +7,7 @@ import {styles} from "./Charts/styles";
 import Chart from 'react-apexcharts'
 import {getDataForDay} from "../utils/processedData";
 import Flex from "./base/Flex";
+import getDatesList from '../utils/getDatesList';
 
 const options = {
     chart: {
@@ -63,7 +64,7 @@ const options = {
         axisBorder: {
             show: false
         },
-        categories: data.map(d => moment(d.date, 'DD-MM-YYYY').format('MMM D'))
+        categories: getDatesList()
     },
     legend: {
         position: 'top',
