@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/stats.json';
-import {ResponsiveBar} from '@nivo/bar';
-import useCurrentScreen from '../../utils/getResizedScreen';
 import moment from 'moment';
-import {defs, styles} from "./styles";
-import Button from "../base/Button";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {styles} from "./styles";
 import Chart from 'react-apexcharts'
 
 const options = {
@@ -91,13 +87,13 @@ const series =  [
   }];
 
 const MainContainer = () => {
-  const [groupMode, setGroupMode] = useState('stacked');
+  /*const [groupMode, setGroupMode] = useState('stacked');
 
   const toggle = () => {
 
     setGroupMode(groupMode === 'grouped' ? 'stacked' : 'grouped');
     console.log('happening');
-  };
+  };*/
 
 
   return (

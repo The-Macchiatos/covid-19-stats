@@ -1,8 +1,6 @@
 import React from 'react';
 import {Text, Box} from '../base';
 import data from '../../data/summary.json';
-import useCurrentScreen from '../../utils/getResizedScreen';
-import {styles} from "./styles";
 
 import Chart from 'react-apexcharts'
 

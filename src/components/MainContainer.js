@@ -1,6 +1,5 @@
 import React from 'react';
-import {Text, Heading, Flex, Box} from './base';
-import Image from "./base/Image";
+import {Heading, Flex, Box} from './base';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const styles = {
@@ -21,17 +20,6 @@ const MainContainer = ({children}) => {
             color='white'>
             <FontAwesomeIcon icon="virus" size="1x"/> Covid-19 Mauritius
           </Heading>
-         {/* <Text
-            fontSize={[1, 2, 2, 2]}
-            textAlign={'end'}
-            width={'100%'}
-            sx={{
-              mt: 10
-            }}
-            fontWeight='500'
-            color='white'>
-            Updated on: April 11
-          </Text>*/}
         </Box>
       </Flex>
       {children}
