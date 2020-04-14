@@ -43,7 +43,7 @@ const Origin = () => {
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>
-                    Cases by age
+                    Cases by origin
                 </Text>
                 <Chart options={options}  type="donut" series={series}/>
 

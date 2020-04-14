@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MainContainer from './components/MainContainer';
 import CardBox from './components/StatsCards';
 import AllCases from './components/Charts/AllCases';
@@ -15,10 +15,6 @@ import {
     faCaretDown,
     faMinus,
     faVirus,
-    faViruses,
-    faHeartbeat,
-    faShieldVirus,
-    faLungsVirus, faChartBar,
 } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css';
@@ -26,7 +22,7 @@ import Box from "./components/base/Box";
 import TotalCard from "./components/TotalCard";
 import {styles} from "./components/Charts/styles";
 
-library.add(faCaretUp, faCaretDown, faMinus, faVirus, faViruses, faHeartbeat, faShieldVirus, faLungsVirus, faChartBar);
+library.add(faCaretUp, faCaretDown, faMinus, faVirus);
 
 
 function App() {
