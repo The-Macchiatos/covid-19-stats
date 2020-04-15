@@ -17,7 +17,7 @@ const options = {
       enabled: true
     },
   },
-  colors:['#9e86ff', '#007ae1', '#1ca8dd'],
+  colors:['#9e86ff', '#007ae1', '#1ca8dd', '#db86ff'],
   dataLabels: {
     enabled: false
   },
@@ -84,6 +84,10 @@ const series =  [
   {
     name: 'Active',
     data: data.map(d => d.active.total)
+  },
+  {
+    name: 'Overseas Treatment',
+    data: data.map(d => d.overseas)
   }];
 
 const MainContainer = () => {
