@@ -8,3 +8,9 @@ export const styles = {
     },
     marginBottom: '2rem'
 };
+
+export const shareStyles = {
+  width: '100%',
+  overflow: 'hidden',
+  marginBottom: '2rem'
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Box} from '../base';
+import {Heading, Box} from '../base';
 import data from '../../data/summary.json';
 
 import Chart from 'react-apexcharts'
@@ -35,16 +35,15 @@ const Age = () => {
     return (
         <>
             <Box>
-                <Text
-                  sx={{
-                    pb: 3
-                  }}
+                <Heading
+                    as={'h2'}
+                    sx={{pb: 3}}
                     fontSize={[2, 2, 3, 4]}
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>
                     Cases by age
-                </Text>
+                </Heading>
                 <Chart options={options}  type="donut" series={series}/>
 
             </Box>
