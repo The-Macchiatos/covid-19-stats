@@ -1,6 +1,6 @@
 
 const url = 'https://covid19-mauritius.com/';
-const shareMessage = 'Check live statistics and daily charts and graphics for COVID-19 in Mauritius';
+const shareMessage = 'Check live statistics, daily charts, and graphics for COVID-19 in Mauritius';
 
 export const fbURL = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
 
