@@ -10,7 +10,7 @@ const Age = () => {
             type: 'donut'
         },
         dataLabels: {
-            enabled: false
+            enabled: true
         },
         fill: {
             border: false
@@ -36,10 +36,10 @@ const Age = () => {
         <>
             <Box>
                 <Text
+                  sx={{
+                    pb: 3
+                  }}
                     fontSize={[2, 2, 3, 4]}
-                    sx={{
-                      mt: 40, mb:20
-                    }}
                     textAlign={'center'}
                     fontWeight='500'
                     color='white'>

@@ -10,7 +10,7 @@ const Gender = () => {
             type: 'donut'
         },
         dataLabels: {
-            enabled: false
+            enabled: true
         },
         fill: {
             border: false
@@ -38,7 +38,7 @@ const Gender = () => {
                 <Text
                     fontSize={[2, 2, 3, 4]}
                     sx={{
-                        mt: 40, mb:20
+                        pb: 3
                     }}
                     textAlign={'center'}
                     fontWeight='500'

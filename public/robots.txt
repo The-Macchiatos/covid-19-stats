@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
+
+Sitemap: https://covid19-mauritius.com/sitemap.xml
+
 User-agent: *
-Disallow:
+Disallow: /icon-*.svg

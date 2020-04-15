@@ -50,7 +50,7 @@ function App() {
           <AllCases/>
           <NewCases/>
           <Box __css={styles}>
-              <Tiles columns={[1, 1, 3]} >
+              <Tiles pt={4} columns={[1, 1, 3]} >
                   <Origin/>
                   <Gender/>
                   <Age/>
