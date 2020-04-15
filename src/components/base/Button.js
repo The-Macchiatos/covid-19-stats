@@ -1,7 +1,7 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef, memo} from "react";
 import Box from "./Box";
 
-const Button = forwardRef((props, ref) =>
+const Button = memo(forwardRef((props, ref) =>
     <Box
         ref={ref}
         as='button'
@@ -24,6 +24,6 @@ const Button = forwardRef((props, ref) =>
             borderRadius: 4,
         }}
     />
-);
+));
 
 export  default Button;

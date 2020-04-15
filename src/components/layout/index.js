@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, memo} from 'react';
 import {Box} from '../base';
 
 const px = n => typeof n === 'number' ? n + 'px' : n;
@@ -11,7 +11,7 @@ const countToColumns = n => Array.isArray(n)
   ? n.map(countToColumns)
   : !!n && `repeat(${n}, 1fr)`;
 
-const Tiles = forwardRef(({width, columns, gap = 3, ...props}, ref) => {
+const Tiles = memo(forwardRef(({width, columns, gap = 3, ...props}, ref) => {
   const gridTemplateColumns = !!width ? widthToColumns(width) : countToColumns(columns);
   return (
     <Box
@@ -26,6 +26,6 @@ const Tiles = forwardRef(({width, columns, gap = 3, ...props}, ref) => {
       }}
     />
   );
-});
+}));
 
 export default Tiles;

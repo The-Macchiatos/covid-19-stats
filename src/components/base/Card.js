@@ -1,13 +1,13 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef, memo} from "react";
 import Box from "./Box";
 
 
-const Card = forwardRef((props, ref) =>
+const Card = memo(forwardRef((props, ref) =>
     <Box
         ref={ref}
         variant='card'
         {...props}
     />
-);
+));
 
 export default Card;

@@ -1,8 +1,8 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef,memo} from "react";
 import Box from "./Box";
 
 
-const Image = forwardRef((props, ref) =>
+const Image = memo(forwardRef((props, ref) =>
     <Box
         ref={ref}
         as='img'
@@ -12,6 +12,6 @@ const Image = forwardRef((props, ref) =>
             height: 'auto',
         }}
     />
-);
+));
 
 export default Image;

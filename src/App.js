@@ -1,11 +1,4 @@
-import React from 'react';
-import MainContainer from './components/MainContainer';
-import CardBox from './components/StatsCards';
-import AllCases from './components/Charts/AllCases';
-import NewCases from './components/Charts/NewCases';
-import Gender from "./components/Charts/Gender";
-import Age from "./components/Charts/Age";
-import Origin from "./components/Charts/Origin";
+import React, {lazy, Suspense} from 'react';
 import Tiles from "./components/layout";
 import {cardData} from "./utils/processedData";
 
@@ -25,13 +18,21 @@ import ShareButtons from './components/SocialShareButtons/index';
 import Flex from './components/base/Flex';
 import Heading from './components/base/Heading';
 
+const MainContainer = lazy(() => import('./components/MainContainer'));
+const CardBox = lazy(() => import('./components/StatsCards'));
+const AllCases = lazy(() => import('./components/Charts/AllCases'));
+const NewCases = lazy(() => import('./components/Charts/NewCases'));
+const Gender = lazy(() => import('./components/Charts/Gender'));
+const Age = lazy(() => import('./components/Charts/Age'));
+const Origin = lazy(() => import('./components/Charts/Origin'));
+
 library.add(faCaretUp, faCaretDown, faMinus, faVirus);
 
 
 function App() {
 
   return (
-    <>
+    <Suspense fallback={<h1 style={{margin: '1% 4%'}}>Loading COVID-19 statistics...</h1>}>
       <MainContainer>
           <Tiles columns={[1, 2, 2]} mb={1}>
               <Box>
@@ -41,7 +42,7 @@ function App() {
                   <Tiles columns={[1, 2, 2]} mb={4}>
                   {cardData.map((item, key) => (
                       <CardBox
-                          key={key}
+                          key={`cardbox-${key}`}
                           text={item.name}
                           {...item}
                       />))
@@ -79,7 +80,7 @@ function App() {
       </MainContainer>
 
 
-    </>
+    </Suspense>
 
   );
 }
