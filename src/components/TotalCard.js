@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, Box} from './base';
 import data from '../data/stats.json';
-import moment from 'moment';
 import {styles} from "./Charts/styles";
 
 import Chart from 'react-apexcharts'

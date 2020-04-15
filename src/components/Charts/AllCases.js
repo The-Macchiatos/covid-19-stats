@@ -17,7 +17,7 @@ const options = {
       enabled: true
     },
   },
-  colors:['#9e86ff', '#007ae1', '#1ca8dd', '#db86ff'],
+  colors:['#9e86ff', '#007ae1', '#db86ff', '#1ca8dd' ],
   dataLabels: {
     enabled: false
   },
@@ -82,13 +82,14 @@ const series =  [
     data: data.map(d => d.recovered)
   },
   {
+    name: 'Overseas Treatment',
+    data: data.map(d => d.overseas)
+  },
+  {
     name: 'Active',
     data: data.map(d => d.active.total)
   },
-  {
-    name: 'Overseas Treatment',
-    data: data.map(d => d.overseas)
-  }];
+ ];
 
 const MainContainer = () => {
   /*const [groupMode, setGroupMode] = useState('stacked');
