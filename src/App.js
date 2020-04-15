@@ -20,7 +20,10 @@ import {
 import './style.css';
 import Box from "./components/base/Box";
 import TotalCard from "./components/TotalCard";
-import {styles} from "./components/Charts/styles";
+import {shareStyles, styles} from './components/Charts/styles';
+import ShareButtons from './components/SocialShareButtons/index';
+import Flex from './components/base/Flex';
+import Heading from './components/base/Heading';
 
 library.add(faCaretUp, faCaretDown, faMinus, faVirus);
 
@@ -56,7 +59,22 @@ function App() {
                   <Age/>
               </Tiles>
           </Box>
-
+        <Box>
+          <Heading
+            as={'h2'}
+            fontSize={[2, 2, 3, 4]}
+            mt={40}
+            textAlign={'center'}
+            fontWeight='500'
+            color='white'>
+            Share it
+          </Heading>
+          <Flex justifyContent='center' mt={2} pb={1} pt={1} textAlign="center" __css={shareStyles}>
+            <Tiles columns={[3, 3, 3]} mb={1}>
+              <ShareButtons/>
+            </Tiles>
+          </Flex>
+        </Box>
 
       </MainContainer>
 

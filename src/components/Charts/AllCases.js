@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Box} from '../base';
+import {Heading, Box} from '../base';
 import data from '../../data/stats.json';
 import {styles} from "./styles";
 import Chart from 'react-apexcharts'
@@ -98,7 +98,8 @@ const MainContainer = () => {
 
   return (
     <Box __css={styles}>
-      <Text
+      <Heading
+        as={'h2'}
         fontSize={[2, 2, 3, 4]}
         mt={40}
         textAlign={'center'}
@@ -106,7 +107,7 @@ const MainContainer = () => {
         color='white'>
         All Cases
 
-      </Text>
+      </Heading>
      {/* <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>*/}
 
       <Box p="2">

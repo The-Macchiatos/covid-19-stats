@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Box} from '../base';
+import {Box, Heading} from '../base';
 import data from '../../data/stats.json';
 import moment from 'moment';
 import {styles} from "./styles";
@@ -99,7 +99,8 @@ const MainContainer = () => {
 
   return (
       <Box __css={styles}>
-        <Text
+        <Heading
+            as={'h2'}
             fontSize={[2, 2, 3, 4]}
             mt={40}
             textAlign={'center'}
@@ -107,13 +108,13 @@ const MainContainer = () => {
             color='white'>
           New Cases
 
-        </Text>
+        </Heading>
         {/* <Button onClick={toggle}><FontAwesomeIcon size="1x" icon="chart-bar"/></Button>*/}
 
-        <Box p="2">
-          <Chart options={options} series={series} type="bar" height={320} />
-        </Box>
+      <Box p="2">
+        <Chart options={options} series={series} type="bar" height={320}/>
       </Box>
+    </Box>
   );
 };
 
