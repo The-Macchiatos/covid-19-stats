@@ -711,5 +711,33 @@
     "recovered_new": 9,
     "critical": 2,
     "critical_new": 0
+  },
+  {
+    "date": "15/04/2020",
+    "new": 0,
+    "active": {
+      "total": 247,
+      "gender": {
+        "male": null,
+        "female": null
+      },
+      "age": {
+        "21": null,
+        "59": null,
+        "60": null,
+        "00": null
+      },
+      "source": {
+        "local": null,
+        "imported": null
+      }
+    },
+    "overseas": 3,
+    "death": 9,
+    "death_new": 0,
+    "recovered": 65,
+    "recovered_new": 14,
+    "critical": 2,
+    "critical_new": 0
   }
 ]
