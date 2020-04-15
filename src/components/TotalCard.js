@@ -78,7 +78,7 @@ const options = {
 const series =  [
     {
         name: 'Total',
-        data: data.map(d => d.active.total + d.death + d.recovered)
+        data: data.map(d => d.active.total + d.death + d.recovered + (d.overseas || 0))
     }];
 
 const TotalCard = () => {
