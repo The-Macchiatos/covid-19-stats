@@ -102,7 +102,7 @@ const TotalCard = () => {
                         fontWeight='400'
                         color='#8B97C6'
                         letterSpacing={2}>
-                        Total Confirm Cases
+                        Total Confirmed Cases
                     </Text>
                 </Text>
                 <Text
