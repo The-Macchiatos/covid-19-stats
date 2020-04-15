@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Heading, Flex, Box} from './base';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
@@ -33,4 +33,4 @@ const MainContainer = ({children}) => {
   );
 };
 
-export default MainContainer;
+export default memo(MainContainer);

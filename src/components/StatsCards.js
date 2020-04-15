@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Text, Box} from './base';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Flex from "./base/Flex";
@@ -15,7 +15,7 @@ const styles = {
     }
 };
 
-const CardBox = ({text, cases, cases_prev, percentage, ...props}) => {
+const CardBox = ({key, text, cases, cases_prev, percentage}) => {
 
     const isNegative = cases - cases_prev < 0;
     const isZero = cases - cases_prev === 0;
@@ -23,6 +23,7 @@ const CardBox = ({text, cases, cases_prev, percentage, ...props}) => {
 
     const options = {
         chart: {
+            id: `radialBar-${key}`,
             height: 350,
             type: 'radialBar',
         },
@@ -65,7 +66,7 @@ const CardBox = ({text, cases, cases_prev, percentage, ...props}) => {
     };
 
   return (
-    <Box mb={1} key={props.key} __css={styles}>
+    <Box mb={1} key={`stats-${key}`} __css={styles}>
       <Box>
           <Chart options={options} series={series} type="radialBar" height={150} />
       </Box>
@@ -94,4 +95,4 @@ const CardBox = ({text, cases, cases_prev, percentage, ...props}) => {
   );
 };
 
-export default CardBox;
+export default memo(CardBox);

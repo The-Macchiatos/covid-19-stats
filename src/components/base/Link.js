@@ -1,13 +1,13 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef, memo} from "react";
 import Box from "./Box";
 
-const Link = forwardRef((props, ref) =>
+const Link = memo(forwardRef((props, ref) =>
     <Box
         ref={ref}
         as='a'
         variant='link'
         {...props}
     />
-);
+));
 
 export default Link;

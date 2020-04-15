@@ -1,7 +1,7 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef, memo} from "react";
 import Box from "./Box";
 
-const Heading = forwardRef((props, ref) =>
+const Heading = memo(forwardRef((props, ref) =>
     <Box
         ref={ref}
         as={props.as || 'h1'}
@@ -15,6 +15,6 @@ const Heading = forwardRef((props, ref) =>
             lineHeight: 'heading',
         }}
     />
-);
+));
 
 export default Heading;
