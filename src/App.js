@@ -12,12 +12,12 @@ import {
 
 import './style.css';
 import Box from "./components/base/Box";
-import TotalCard from "./components/TotalCard";
 import {shareStyles, styles} from './components/Charts/styles';
 import ShareButtons from './components/SocialShareButtons/index';
 import Flex from './components/base/Flex';
 import Heading from './components/base/Heading';
 
+const TotalCard = lazy(()=> import("./components/TotalCard")) ;
 const MainContainer = lazy(() => import('./components/MainContainer'));
 const CardBox = lazy(() => import('./components/StatsCards'));
 const AllCases = lazy(() => import('./components/Charts/AllCases'));
@@ -32,7 +32,7 @@ library.add(faCaretUp, faCaretDown, faMinus, faVirus);
 function App() {
 
   return (
-    <Suspense fallback={<h1 style={{margin: '1% 4%'}}>Loading COVID-19 statistics...</h1>}>
+    <Suspense fallback={<div/>}>
       <MainContainer>
           <Tiles columns={[1, 2, 2]} mb={1}>
               <Box>
