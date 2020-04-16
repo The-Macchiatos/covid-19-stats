@@ -10,7 +10,7 @@ export const styles = {
 };
 
 export const shareStyles = {
-  width: '100%',
-  overflow: 'hidden',
-  marginBottom: '2rem'
+    width: '100%',
+    overflow: 'hidden',
+    marginBottom: '2rem'
 };

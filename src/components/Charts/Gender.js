@@ -1,5 +1,5 @@
 import React from 'react';
-import {Heading, Box} from '../base';
+import {Box, Heading} from '../base';
 import data from '../../data/summary.json';
 
 import Chart from 'react-apexcharts'
@@ -26,7 +26,7 @@ const Gender = () => {
             },
         },
         labels: ['Male', 'Female'],
-        colors:['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
+        colors: ['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
     };
 
     const series = [data.gender['male'], data.gender['female']];
@@ -46,7 +46,7 @@ const Gender = () => {
                     color='white'>
                     Cases by gender
                 </Heading>
-                <Chart options={options}  type="donut" series={series}/>
+                <Chart options={options} type="donut" series={series}/>
 
             </Box>
         </>

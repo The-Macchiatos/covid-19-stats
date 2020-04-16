@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Box} from './base';
+import {Box, Text} from './base';
 import data from '../data/stats.json';
 import {styles} from "./Charts/styles";
 
@@ -74,7 +74,7 @@ const options = {
     },
 };
 
-const series =  [
+const series = [
     {
         name: 'Total',
         data: data.map(d => d.total)
@@ -140,7 +140,7 @@ const TotalCard = () => {
 
 
             <Box>
-                <Chart options={options} series={series} type="area" height={242} />
+                <Chart options={options} series={series} type="area" height={242}/>
             </Box>
         </Box>
     );

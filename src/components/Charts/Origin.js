@@ -1,5 +1,5 @@
 import React from 'react';
-import {Heading, Box} from '../base';
+import {Box, Heading} from '../base';
 import data from '../../data/summary.json';
 
 import Chart from 'react-apexcharts'
@@ -26,7 +26,7 @@ const Origin = () => {
             },
         },
         labels: ['local', 'imported'],
-        colors:['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
+        colors: ['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
     };
 
     const series = [data.source['local'], data.source['imported']];
@@ -44,7 +44,7 @@ const Origin = () => {
                     color='white'>
                     Cases by origin
                 </Heading>
-                <Chart options={options}  type="donut" series={series}/>
+                <Chart options={options} type="donut" series={series}/>
 
             </Box>
         </>

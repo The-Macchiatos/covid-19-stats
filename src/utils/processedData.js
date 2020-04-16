@@ -1,4 +1,5 @@
 import data from "../data/stats";
+import summary from '../data/summary';
 
 const cardData = [
     {
@@ -40,6 +41,11 @@ export function getDataForDay(index) {
     const overseas = data[data.length - index]['overseas'];
     const total = data[data.length - index]['total'];
     return {active, recovered, death, critical, total, newCases, overseas}
+}
+
+
+export function getLastUpdated() {
+    return summary.date;
 }
 
 export {cardData}

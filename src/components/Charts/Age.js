@@ -1,5 +1,5 @@
 import React from 'react';
-import {Heading, Box} from '../base';
+import {Box, Heading} from '../base';
 import data from '../../data/summary.json';
 
 import Chart from 'react-apexcharts'
@@ -16,7 +16,7 @@ const Age = () => {
             border: false
         },
         stroke: {
-          show: false
+            show: false
         },
         legend: {
             position: 'top',
@@ -26,7 +26,7 @@ const Age = () => {
             },
         },
         labels: ['<20', '21 - 39', '40 - 59', '60+'],
-        colors:['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
+        colors: ['#9e86ff', '#007ae1', '#1ca8dd', "#db86ff"],
     };
 
     const series = [data.age['20'], data.age['21-39'], data.age['40-59'], data.age['60']];
@@ -44,7 +44,7 @@ const Age = () => {
                     color='white'>
                     Cases by age
                 </Heading>
-                <Chart options={options}  type="donut" series={series}/>
+                <Chart options={options} type="donut" series={series}/>
 
             </Box>
         </>

@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
-import {Text, Box} from './base';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {Box, Text} from './base';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Flex from "./base/Flex";
 import Chart from 'react-apexcharts'
 
@@ -43,7 +43,7 @@ const CardBox = ({key, text, cases, cases_prev, percentage}) => {
         plotOptions: {
             radialBar: {
                 hollow: {
-                  margin: 15,
+                    margin: 15,
                     size: "60%"
                 },
                 track: {
@@ -65,34 +65,35 @@ const CardBox = ({key, text, cases, cases_prev, percentage}) => {
         labels: [cases]
     };
 
-  return (
-    <Box mb={1} key={`stats-${key}`} __css={styles}>
-      <Box>
-          <Chart options={options} series={series} type="radialBar" height={150} />
-      </Box>
+    return (
+        <Box mb={1} key={`stats-${key}`} __css={styles}>
+            <Box>
+                <Chart options={options} series={series} type="radialBar" height={150}/>
+            </Box>
 
-      <Text
-        fontSize={1}
-        fontWeight='400'
-        color='#8B97C6'
-        letterSpacing={2}>
-        {text}
-      </Text>
-
-        <Flex
-            justifyContent={'center'}
-        >
             <Text
-                color={isNegative ? 'danger' : 'success'}
-                p={2}
-            >
-                {!isZero && <><FontAwesomeIcon icon={isNegative ? 'caret-down' : 'caret-up' }/> {isNegative ? (0 - (cases - cases_prev)) : (cases -cases_prev)}</>}
-                {isZero && <FontAwesomeIcon icon="minus"/>}
+                fontSize={1}
+                fontWeight='400'
+                color='#8B97C6'
+                letterSpacing={2}>
+                {text}
             </Text>
-        </Flex>
 
-    </Box>
-  );
+            <Flex
+                justifyContent={'center'}
+            >
+                <Text
+                    color={isNegative ? 'danger' : 'success'}
+                    p={2}
+                >
+                    {!isZero && <><FontAwesomeIcon
+                        icon={isNegative ? 'caret-down' : 'caret-up'}/> {isNegative ? (0 - (cases - cases_prev)) : (cases - cases_prev)}</>}
+                    {isZero && <FontAwesomeIcon icon="minus"/>}
+                </Text>
+            </Flex>
+
+        </Box>
+    );
 };
 
 export default memo(CardBox);

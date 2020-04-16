@@ -9,7 +9,7 @@ const Button = memo(forwardRef((props, ref) =>
         variant='primary'
         {...props}
         __css={{
-          ...props.__css,
+            ...props.__css,
             appearance: 'none',
             display: 'inline-block',
             textAlign: 'center',
@@ -26,4 +26,4 @@ const Button = memo(forwardRef((props, ref) =>
     />
 ));
 
-export  default Button;
+export default Button;

@@ -1,4 +1,4 @@
-import { Box as Rebox} from 'reflexbox/styled-components'
+import {Box as Rebox} from 'reflexbox/styled-components'
 import React, {forwardRef, memo} from "react";
 
 const Box = memo(forwardRef((props, ref) =>

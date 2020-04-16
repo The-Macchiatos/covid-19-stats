@@ -7,7 +7,7 @@ import Image from "./Image";
 import Link from "./Link";
 import Text from "./Text";
 
-export { Box, Flex, Button, Card, Heading, Image, Link, Text }
+export {Box, Flex, Button, Card, Heading, Image, Link, Text}
 
 
 

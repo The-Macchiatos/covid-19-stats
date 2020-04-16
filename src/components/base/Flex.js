@@ -1,4 +1,4 @@
-import { Flex as Reflex} from 'reflexbox/styled-components'
+import {Flex as Reflex} from 'reflexbox/styled-components'
 import React, {forwardRef, memo} from "react";
 
 const Flex = memo(forwardRef((props, ref) =>
