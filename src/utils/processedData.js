@@ -44,8 +44,9 @@ export function getDataForDay(index) {
 }
 
 
-export function getLastUpdated() {
-    return summary.date;
+export function getLastUpdated(type) {
+
+    return type === 'summary' ? summary.date : data[data.length - 1].date;
 }
 
 export {cardData}

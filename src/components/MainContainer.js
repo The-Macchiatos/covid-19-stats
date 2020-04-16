@@ -1,6 +1,7 @@
 import React, {memo} from 'react';
-import {Box, Flex, Heading} from './base';
+import {Box, Flex, Heading, Text} from './base';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {getLastUpdated} from "../utils/processedData";
 
 const styles = {
     maxWidth: '1440px',
@@ -13,12 +14,16 @@ const MainContainer = ({children}) => {
         <Box as='main' __css={styles}>
             <Flex mb={2} pb='1' justifyContent='space-between'>
                 <Box __css={{width: '100%'}}>
-
                     <Heading
                         as="h1"
-                        fontSize={[2, 2, 4, 4]}
+                        fontSize={[3, 3, 4, 4]}
                         color='white'>
                         <FontAwesomeIcon icon="virus" size="1x"/> Covid-19 Mauritius
+                        <Text
+                            sx={{float: 'right'}}
+                            color="white"
+                            fontSize={[1, 1, 1, 1]}
+                        ><strong>Last updated:</strong> {getLastUpdated()}</Text>
                     </Heading>
                     <Heading
                         mb={4}

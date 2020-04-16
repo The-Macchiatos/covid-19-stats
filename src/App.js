@@ -1,6 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import Box from "./components/base/Box";
 import Flex from './components/base/Flex';
+import Text from './components/base/Text';
 import Tiles from "./components/layout";
 import ShareButtons from './components/SocialShareButtons/index';
 
@@ -55,7 +56,11 @@ function App() {
                         <Gender/>
                         <Age/>
                     </Tiles>
-                    Last updated {getLastUpdated()}
+                    <Text
+                        color="white"
+                        textAlign="right"
+                        fontSize={[1, 1, 1, 1]}
+                    ><strong>Last updated:</strong> {getLastUpdated('summary')} | <strong>Source:</strong> Ministry of Health and Wellness</Text>
                 </Box>
                 <Box>
                     <Heading
