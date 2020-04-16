@@ -3,15 +3,13 @@ import Box from "./components/base/Box";
 import Flex from './components/base/Flex';
 import Text from './components/base/Text';
 import Tiles from "./components/layout";
+import Heading from './components/base/Heading';
 import ShareButtons from './components/SocialShareButtons/index';
 
 import {cardData, getLastUpdated} from "./utils/processedData";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faCaretDown, faCaretUp, faMinus, faVirus,} from '@fortawesome/free-solid-svg-icons'
 import {shareStyles, styles} from './components/Charts/styles';
-
-
-import Heading from './components/base/Heading';
 
 import './style.css';
 
@@ -57,8 +55,9 @@ function App() {
                         <Age/>
                     </Tiles>
                     <Text
+                        px={30}
+                        py={10}
                         color="white"
-                        textAlign="right"
                         fontSize={[1, 1, 1, 1]}
                     ><strong>Last updated:</strong> {getLastUpdated('summary')} | <strong>Source:</strong> Ministry of Health and Wellness</Text>
                 </Box>

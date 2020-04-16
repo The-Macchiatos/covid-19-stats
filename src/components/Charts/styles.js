@@ -7,7 +7,6 @@ export const styles = {
         backgroundColor: 'rgba(31,41,51, 0.8)'
     },
     marginBottom: '1rem',
-    padding: '2rem'
 };
 
 export const shareStyles = {

@@ -87,7 +87,7 @@ const TotalCard = () => {
 
     return (
         <Box __css={styles} pb={4}>
-            <Flex pb={2} px={4} textAlign="center">
+            <Flex pb={5} px={4} textAlign="center">
                 <Text
                     fontSize={[2, 2, 5, 5]}
                     mt={20}
@@ -140,7 +140,7 @@ const TotalCard = () => {
 
 
             <Box>
-                <Chart options={options} series={series} type="area" height={246}/>
+                <Chart options={options} series={series} type="area" height={242}/>
             </Box>
         </Box>
     );
