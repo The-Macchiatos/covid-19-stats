@@ -87,7 +87,7 @@ const series =  [
   },
   {
     name: 'Active',
-    data: data.map(d => d.active.total)
+    data: data.map(d => d.active)
   },
  ];
 

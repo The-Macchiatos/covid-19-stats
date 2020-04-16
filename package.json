@@ -22,8 +22,7 @@
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +40,5 @@
     ]
   },
   "devDependencies": {
-    "react-snap": "^1.23.0"
   }
 }

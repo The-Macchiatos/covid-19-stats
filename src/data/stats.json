@@ -2,765 +2,359 @@
   {
     "date": "18/03/2020",
     "new": 3,
-    "active": {
-      "total": 3,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 3,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 0,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 3
   },
   {
     "date": "19/03/2020",
     "new": 4,
-    "active": {
-      "total": 7,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 7,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 0,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 7
   },
   {
     "date": "20/03/2020",
     "new": 5,
-    "active": {
-      "total": 12,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 12,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 0,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 12
   },
   {
     "date": "21/03/2020",
     "new": 2,
-    "active": {
-      "total": 13,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 13,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 1,
     "death_new": 1,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 14
   },
   {
     "date": "22/03/2020",
     "new": 14,
-    "active": {
-      "total": 26,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 26,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 1,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 28
   },
   {
     "date": "23/03/2020",
     "new": 8,
-    "active": {
-      "total": 34,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 34,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 36
   },
   {
     "date": "24/03/2020",
     "new": 6,
-    "active": {
-      "total": 40,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 40,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 42
   },
   {
     "date": "25/03/2020",
     "new": 6,
-    "active": {
-      "total": 46,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 46,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 48
   },
   {
     "date": "26/03/2020",
     "new": 33,
-    "active": {
-      "total": 79,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 79,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 81
   },
   {
     "date": "27/03/2020",
     "new": 13,
-    "active": {
-      "total": 92,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 92,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 94
   },
   {
     "date": "28/03/2020",
     "new": 8,
-    "active": {
-      "total": 100,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 100,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 102
   },
   {
     "date": "29/03/2020",
     "new": 5,
-    "active": {
-      "total": 105,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 105,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 2,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 107
   },
   {
     "date": "30/03/2020",
     "new": 21,
-    "active": {
-      "total": 125,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 125,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 3,
     "death_new": 1,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 128
   },
   {
     "date": "31/03/2020",
     "new": 15,
-    "active": {
-      "total": 138,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 138,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 5,
     "death_new": 2,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 143
   },
   {
     "date": "01/04/2020",
     "new": 18,
-    "active": {
-      "total": 155,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 155,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 6,
     "death_new": 1,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 161
   },
   {
     "date": "02/04/2020",
     "new": 8,
-    "active": {
-      "total": 162,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 162,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 1,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 169
   },
   {
     "date": "03/04/2020",
     "new": 17,
-    "active": {
-      "total": 179,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 179,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 186
   },
   {
     "date": "04/04/2020",
     "new": 10,
-    "active": {
-      "total": 189,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 189,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 196
   },
   {
     "date": "05/04/2020",
     "new": 31,
-    "active": {
-      "total": 220,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 220,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 0,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 227
   },
   {
     "date": "06/04/2020",
     "new": 17,
-    "active": {
-      "total": 233,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 233,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 4,
-    "recovered_new": 4
+    "recovered_new": 4,
+    "total": 244
   },
   {
     "date": "07/04/2020",
     "new": 24,
-    "active": {
-      "total": 253,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 253,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 8,
-    "recovered_new": 4
+    "recovered_new": 4,
+    "total": 268
   },
   {
     "date": "08/04/2020",
     "new": 5,
-    "active": {
-      "total": 247,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 247,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 19,
-    "recovered_new": 11
+    "recovered_new": 11,
+    "total": 273
   },
   {
     "date": "09/04/2020",
     "new": 41,
-    "active": {
-      "total": 284,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 284,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 7,
     "death_new": 0,
     "recovered": 23,
-    "recovered_new": 4
+    "recovered_new": 4,
+    "total": 314
   },
   {
     "date": "10/04/2020",
     "new": 4,
-    "active": {
-      "total": 286,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 286,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 2,
     "recovered": 23,
-    "recovered_new": 0
+    "recovered_new": 0,
+    "total": 318
   },
   {
     "date": "11/04/2020",
     "new": 1,
-    "active": {
-      "total": 282,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 282,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 28,
     "recovered_new": 5,
     "critical": 3,
-    "critical_new": 0
+    "critical_new": 0,
+    "total": 319
   },
   {
     "date": "12/04/2020",
     "new": 5,
-    "active": {
-      "total": 273,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 273,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 42,
     "recovered_new": 14,
     "critical": 3,
-    "critical_new": 0
+    "critical_new": 0,
+    "total": 324
   },
   {
     "date": "13/04/2020",
     "new": 0,
-    "active": {
-      "total": 273,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 273,
     "overseas": 0,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 42,
     "recovered_new": 0,
     "critical": 3,
-    "critical_new": 0
+    "critical_new": 0,
+    "total": 324
   },
   {
     "date": "14/04/2020",
     "new": 0,
-    "active": {
-      "total": 261,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 261,
     "overseas": 3,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 51,
     "recovered_new": 9,
     "critical": 2,
-    "critical_new": 0
+    "critical_new": 0,
+    "total": 324
   },
   {
     "date": "15/04/2020",
     "new": 0,
-    "active": {
-      "total": 247,
-      "gender": {
-        "male": null,
-        "female": null
-      },
-      "age": {
-        "21": null,
-        "59": null,
-        "60": null,
-        "00": null
-      },
-      "source": {
-        "local": null,
-        "imported": null
-      }
-    },
+    "active": 247,
     "overseas": 3,
+    "overseas_new": 0,
     "death": 9,
     "death_new": 0,
     "recovered": 65,
     "recovered_new": 14,
     "critical": 2,
-    "critical_new": 0
+    "critical_new": 0,
+    "total": 324
   }
 ]
