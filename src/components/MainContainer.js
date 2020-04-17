@@ -18,7 +18,7 @@ const MainContainer = ({children}) => {
                         as="h1"
                         fontSize={[3, 3, 4, 4]}
                         color='white'>
-                        <FontAwesomeIcon icon="virus" size="1x"/> Covid-19 Mauritius
+                        <FontAwesomeIcon icon="virus" size="1x"/> COVID-19 Mauritius
                         <Text
                             sx={{float: 'right'}}
                             color="white"
