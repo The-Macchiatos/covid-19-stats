@@ -10,8 +10,8 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://covid19-mauritius.com/</loc>
-        <lastmod>2020-04-18T11:49:13+00:00</lastmod>
+        <lastmod>2020-04-18</lastmod>
         <changefreq>hourly</changefreq>
-        <priority>1.00</priority>
+        <priority>0.5</priority>
     </url>
 </urlset>
