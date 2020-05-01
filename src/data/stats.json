@@ -566,5 +566,19 @@
     "critical": 0,
     "critical_new": 0,
     "total": 332
+  },
+  {
+    "date": "01/05/2020",
+    "new": 0,
+    "active": 7,
+    "overseas": 3,
+    "overseas_new": 0,
+    "death": 10,
+    "death_new": 0,
+    "recovered": 312,
+    "recovered_new": 2,
+    "critical": 0,
+    "critical_new": 0,
+    "total": 332
   }
 ]
