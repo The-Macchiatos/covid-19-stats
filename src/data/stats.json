@@ -596,7 +596,7 @@
     "total": 332
   },
   {
-    "date": "02/05/2020",
+    "date": "03/05/2020",
     "new": 0,
     "active": 4,
     "overseas": 3,
@@ -604,6 +604,20 @@
     "death": 10,
     "death_new": 0,
     "recovered": 315,
+    "recovered_new": 1,
+    "critical": 0,
+    "critical_new": 0,
+    "total": 332
+  },
+  {
+    "date": "04/05/2020",
+    "new": 0,
+    "active": 3,
+    "overseas": 3,
+    "overseas_new": 0,
+    "death": 10,
+    "death_new": 0,
+    "recovered": 316,
     "recovered_new": 1,
     "critical": 0,
     "critical_new": 0,
