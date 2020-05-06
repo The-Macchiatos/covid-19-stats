@@ -622,5 +622,33 @@
     "critical": 0,
     "critical_new": 0,
     "total": 332
+  },
+  {
+    "date": "05/05/2020",
+    "new": 0,
+    "active": 3,
+    "overseas": 0,
+    "overseas_new": 0,
+    "death": 10,
+    "death_new": 0,
+    "recovered": 319,
+    "recovered_new": 3,
+    "critical": 0,
+    "critical_new": 0,
+    "total": 332
+  },
+  {
+    "date": "06/05/2020",
+    "new": 0,
+    "active": 2,
+    "overseas": 0,
+    "overseas_new": 0,
+    "death": 10,
+    "death_new": 0,
+    "recovered": 320,
+    "recovered_new": 1,
+    "critical": 0,
+    "critical_new": 0,
+    "total": 332
   }
 ]
