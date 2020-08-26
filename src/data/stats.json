@@ -2319,22 +2319,7 @@
   },
   {
     "date": "26/08/2020",
-    "new": 2,
-    "active": 5,
-    "overseas": 0,
-    "overseas_new": 0,
-    "death": 10,
-    "death_new": 0,
-    "recovered": 335,
-    "recovered_new": 0,
-    "critical": 0,
-    "critical_new": 0,
-    "total": 350,
-    "quarantines": 496
-  },
-  {
-    "date": "27/08/2020",
-    "new": 4,
+    "new": 6,
     "active": 9,
     "overseas": 0,
     "overseas_new": 0,
@@ -2344,7 +2329,7 @@
     "recovered_new": 0,
     "critical": 0,
     "critical_new": 0,
-    "total": 354,
+    "total": 350,
     "quarantines": 496
   }
 ]
